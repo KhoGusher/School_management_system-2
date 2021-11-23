@@ -3,6 +3,8 @@ import Sidebar from "./ManagerDashBord/MasterHome/SideBar/SideBar"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Component } from "react";
 import SideBar from "./ManagerDashBord/MasterHome/SideBar/SideBar";
+import "./App.css"
+import Home from "./ManagerDashBord/MasterHome/Home/Home";
 class App extends Component {
   render() {
 
@@ -21,11 +23,9 @@ class App extends Component {
 
         {/* <NavBar /> */}
         <TopBar />
-        <SideBar />
-
-        <div className="other">other</div>
         <div className="containers">
-
+          <SideBar />
+          <Home />
 
           {/* <Teachers /> */}
           {/* <Home /> */}
@@ -56,6 +56,7 @@ class App extends Component {
 
             <Route path='/*' element={<NoMatchPage />} />  */}
           </Routes>
+
         </div>
       </BrowserRouter>
     );

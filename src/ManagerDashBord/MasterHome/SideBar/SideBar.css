@@ -1,11 +1,11 @@
  .sidebar {
-    flex: 4;
+    flex: 1.2;
     height: calc(100vh - 50px);
     background-color: rgb(251, 251, 255);
     position: sticky;
     top: 50px;
+    margin-left: 10px;
   }
-  
   
   .sidebarWrapper {
     padding: 20px;
@@ -15,10 +15,19 @@
   .sidebarMenu {
     margin-bottom: 10px;
   }
+  .dashbord{
+      display: flex;
+      align-items: center;
+      
+  }
   
   .sidebarTitle {
     font-size: 13px;
     color: rgb(187, 186, 186);
+  }
+  .hidesidebar{
+      margin-left: 10px;
+    
   }
   
   .sidebarList {

@@ -6,9 +6,14 @@ import { Link } from "react-router-dom"
 function SideBar() {
     return (
         <div className="sidebar">
+
             <div className="sideBarWrapper">
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTittle">Dashboard</h3>
+                    <div className="dashbord">
+                        <h3 className="sidebarTittle">Dashboard</h3>
+                        <LineStyle className=" sidebarIcon hidesidebar" />
+                    </div>
+
                     <ul className="sidebarList">
                         <li className="sidebarListItem active">
                             <Link to="/Home">
