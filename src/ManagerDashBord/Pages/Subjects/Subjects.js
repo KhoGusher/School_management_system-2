@@ -43,7 +43,7 @@ export default function Subjects() {
         <div className="teacherList">
             <NewSubject />
             <div className="topTeachers">
-                <div className="teachersTitle"><h3>Subjects</h3></div>
+                <div className="teachersTitle"><h3>Subjects Listing</h3></div>
                 <button className="newSubject">Export Subjects</button>
                 <button className="newSubject">Print Preview</button>
                 <div className="btn-search">

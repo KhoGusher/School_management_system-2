@@ -2,37 +2,42 @@ import React from 'react'
 import "./HomeContents.css"
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 import Pic from "./mab.jpg"
+import { Link } from "react-router-dom"
 
 export default function HomeContents() {
     return (
         <div>
             <div className="HomeContents">
-                <div className="homeContentIterm">
-                    <img src={Pic} className="card-img-top" alt="" />
-                    <span className="homeContentitermTitle">Teachers</span>
-                    <div className="homeContenterContents">
-                        <span className="homeContenterContentsSub">Males:12</span>
+                <Link to="/Teachers">
+                    <div className="homeContentIterm">
+                        <img src={Pic} className="card-img-top" alt="" />
+                        <span className="homeContentitermTitle">Teachers</span>
+                        <div className="homeContenterContents">
+                            <span className="homeContenterContentsSub">Males:12</span>
+                        </div>
+                        <span className="homeContenterContentsSub">Females:12</span>
                     </div>
-                    <span className="homeContenterContentsSub">Females:12</span>
-                </div>
-
-                <div className="homeContentIterm">
-                    <img src={Pic} className="card-img-top" alt="" />
-                    <span className="homeContentitermTitle">Students</span>
-                    <div className="homeContenterContents">
-                        <span className="homeContenterContentsSub">Males:22</span>
+                </Link>
+                <Link to="/Students">
+                    <div className="homeContentIterm">
+                        <img src={Pic} className="card-img-top" alt="" />
+                        <span className="homeContentitermTitle">Students</span>
+                        <div className="homeContenterContents">
+                            <span className="homeContenterContentsSub">Males:22</span>
+                        </div>
+                        <span className="homeContenterContentsSub">Females:2</span>
                     </div>
-                    <span className="homeContenterContentsSub">Females:2</span>
-                </div>
-
-                <div className="homeContentIterm">
-                    <img src={Pic} className="card-img-top" alt="" />
-                    <span className="homeContentitermTitle">Candidates</span>
-                    <div className="homeContenterContents">
-                        <span className="homeContenterContentsSub">Males:1</span>
+                </Link>
+                <Link to="/Candidates">
+                    <div className="homeContentIterm">
+                        <img src={Pic} className="card-img-top" alt="" />
+                        <span className="homeContentitermTitle">Candidates</span>
+                        <div className="homeContenterContents">
+                            <span className="homeContenterContentsSub">Males:1</span>
+                        </div>
+                        <span className="homeContenterContentsSub">Females:12</span>
                     </div>
-                    <span className="homeContenterContentsSub">Females:12</span>
-                </div>
+                </Link>
 
 
                 {/* <div class="card" >
@@ -45,30 +50,36 @@ export default function HomeContents() {
             </div> */}
             </div>
             <div className="HomeContents">
-                <div className="homeContentIterm">
-                    <img src={Pic} className="card-img-top" alt="" />
-                    <span className="homeContentitermTitle">Subjects</span>
-                    <div className="homeContenterContents">
-                        <span className="homeContenterContentsSub">Total:10</span>
-                    </div>
+                <Link to="/Subjects">
+                    <div className="homeContentIterm">
+                        <img src={Pic} className="card-img-top" alt="" />
+                        <span className="homeContentitermTitle">Subjects</span>
+                        <div className="homeContenterContents">
+                            <span className="homeContenterContentsSub">Total:10</span>
+                        </div>
 
-                </div>
-                <div className="homeContentIterm">
-                    <img src={Pic} className="card-img-top" alt="" />
-                    <span className="homeContentitermTitle">Classes</span>
-                    <div className="homeContenterContents">
-                        <span className="homeContenterContentsSub">Total:</span>
                     </div>
+                </Link>
+                <Link to="/Classes">
+                    <div className="homeContentIterm">
+                        <img src={Pic} className="card-img-top" alt="" />
+                        <span className="homeContentitermTitle">Classes</span>
+                        <div className="homeContenterContents">
+                            <span className="homeContenterContentsSub">Total:</span>
+                        </div>
 
-                </div>
-                <div className="homeContentIterm">
-                    <img src={Pic} className="card-img-top" alt="" />
-                    <span className="homeContentitermTitle">Ranks</span>
-                    <div className="homeContenterContents">
-                        <span className="homeContenterContentsSub">Total:13</span>
                     </div>
+                </Link>
+                <Link to="/Ranks">
+                    <div className="homeContentIterm">
+                        <img src={Pic} className="card-img-top" alt="" />
+                        <span className="homeContentitermTitle">Ranks</span>
+                        <div className="homeContenterContents">
+                            <span className="homeContenterContentsSub">Total:13</span>
+                        </div>
 
-                </div>
+                    </div>
+                </Link>
             </div>
 
         </div>

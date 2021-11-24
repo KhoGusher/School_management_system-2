@@ -15,8 +15,8 @@ export default function SubjectDetails() {
     return (
 
         <div className="subject">
-            <div className="teacherTitleContainer">
-                <h3 className="teacherTitle">Subject Details For : Chichewa -chich111</h3>
+            <div className="subjectTitleContainer">
+                <h3 className="subjectTitle">Subject Details For : Chichewa -chich111</h3>
             </div>
             <div className="newUser">
                 <h2 className="newUserTitle">Editing Subject</h2>
@@ -32,10 +32,12 @@ export default function SubjectDetails() {
                     <button className="newUserButton">Update</button>
                 </form>
             </div>
-            <div className="teacherContaine">
-                <div className="teacherShow">
+            <div className="subjectContaine">
+                <div className="subjectShow">
                     <div className="userShowTopTitle">
-                        <span className="userUpdateTitle">Students</span>
+                        <span className="userUpdateTitle">Students
+                            <input></input></span>
+
                     </div>
 
                     <div className="userShowBottom">
@@ -46,14 +48,14 @@ export default function SubjectDetails() {
                     </div>
                 </div>
 
-                <div className="teacherUpdate">
+                <div className="subjectUpdate">
                     <div className="userUpdate">
                         <span className="userUpdateTitle">Teachers</span>
+                        <input></input>
                         <form className="userUpdateForm">
                             <div className="userUpdateLeft">
                                 <div className="userUpdateItem">
                                     <label>Kondwani Nantchito</label>
-
 
                                 </div>
 

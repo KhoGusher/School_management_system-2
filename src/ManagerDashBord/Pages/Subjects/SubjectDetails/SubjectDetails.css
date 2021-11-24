@@ -2,12 +2,12 @@
     flex: 7;
     padding: 20px;
 }
-.teacherTitleContainer{
+.subjectTitleContainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.teacherAddBtn{
+.subjectAddBtn{
     width: 80px;
     border: none;
     padding: 5px;
@@ -18,18 +18,18 @@
     font-size: 16px;
     margin-right: 20px;
 }
-.teacherContaine{
+.subjectContaine{
     display: flex;
     margin-top: 20px;
 }
-.teacherShow{
+.subjectShow{
 flex: 1;
 padding: 20;
 align-items: center;
 -webkit-box-shadow:0px 0px 11px -1px #000000;
 box-shadow: 0px 0px 11px -1px #000000;
 }
-.teacherUpdate{
+.subjectUpdate{
  flex: 1;
   padding: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
@@ -93,7 +93,7 @@ box-shadow: 0px 0px 11px -1px #000000;
 }
 
 .userUpdateItem>label{
-    
+
     margin-bottom: 5px;
     font-size: 14px;
 }

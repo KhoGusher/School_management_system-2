@@ -63,6 +63,23 @@ export const productData = [
     "Sales": 5000,
   },
 ];
+export const Classrows = [
+  {
+    id: 1,
+    ClassName: "std1",
+    ClassDescription: "Candidate",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+  {
+    id: 2,
+    ClassName: "std8",
+    ClassDescription: "Mere",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+
+]
 export const Subjectrows = [
   {
     id: 1,
