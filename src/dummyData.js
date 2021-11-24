@@ -63,6 +63,43 @@ export const productData = [
     "Sales": 5000,
   },
 ];
+export const Subjectrows = [
+  {
+    id: 1,
+    subjectName: "chichewa",
+    SubjectCode: "chich10",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+  {
+    id: 2,
+    subjectName: "chichewa",
+    SubjectCode: "chich9",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+  {
+    id: 3,
+    subjectName: "chichewa",
+    SubjectCode: "chich7",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+  {
+    id: 4,
+    subjectName: "chichewa",
+    SubjectCode: "chich4",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+  {
+    id: 5,
+    subjectName: "chichewa",
+    SubjectCode: "chich2",
+    TotalSubjectTeachers: "3",
+    TotalStudents: "13",
+  },
+]
 
 export const Teacherrows = [
   {

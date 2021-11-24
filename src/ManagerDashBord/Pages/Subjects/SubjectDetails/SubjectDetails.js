@@ -1,0 +1,69 @@
+import React from 'react'
+import "./SubjectDetails.css"
+import profile from "../profile.jpg"
+import {
+    CalendarToday,
+    LocationSearching,
+    MailOutline,
+    PermIdentity,
+    PhoneAndroid,
+    Publish,
+} from "@material-ui/icons";
+import { Link } from '@material-ui/core';
+
+export default function SubjectDetails() {
+    return (
+
+        <div className="subject">
+            <div className="teacherTitleContainer">
+                <h3 className="teacherTitle">Subject Details For : Chichewa -chich111</h3>
+            </div>
+            <div className="newUser">
+                <h2 className="newUserTitle">Editing Subject</h2>
+                <form className="newUserForm">
+                    <div className="newUserItem">
+                        <label>Subject Name</label>
+                        <input type="text" placeholder="chichewa" />
+                    </div>
+                    <div className="newUserItem">
+                        <label>Subject Code</label>
+                        <input type="text" placeholder="chich111" />
+                    </div>
+                    <button className="newUserButton">Update</button>
+                </form>
+            </div>
+            <div className="teacherContaine">
+                <div className="teacherShow">
+                    <div className="userShowTopTitle">
+                        <span className="userUpdateTitle">Students</span>
+                    </div>
+
+                    <div className="userShowBottom">
+                        <div className="userShowInfo">
+                            <span className="userShowInfoTitle">Stephano Patrick</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div className="teacherUpdate">
+                    <div className="userUpdate">
+                        <span className="userUpdateTitle">Teachers</span>
+                        <form className="userUpdateForm">
+                            <div className="userUpdateLeft">
+                                <div className="userUpdateItem">
+                                    <label>Kondwani Nantchito</label>
+
+
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}

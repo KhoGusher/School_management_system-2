@@ -43,8 +43,9 @@ function Teachers() {
                         <Link to={"/Teacher/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
-
-                        <Edit className="teacherEdit" />
+                        <Link to={"/Teacher/" + params.row.id}>
+                            <Edit className="teacherEdit" />
+                        </Link>
                         <DeleteOutline className="teacherDelete" onClick={() => handleTecherDelete(params.row.id)} />
                     </>
 
