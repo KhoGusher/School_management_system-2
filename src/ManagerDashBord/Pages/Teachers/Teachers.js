@@ -1,9 +1,8 @@
 import React from 'react'
 import "./Teachers.css"
-// import { DataGrid } from '@mui/x-data-grid';
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
-import { Teacherrows } from "./DammyData"
+import { Teacherrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
@@ -31,16 +30,14 @@ function Teachers() {
             }
         },
         { field: 'lastName', headerName: 'Last name', width: 160 },
-        // { field: 'middleName', headerName: 'Middle name', width: 160 },
         { field: 'dob', headerName: 'D.O.B', width: 115 },
         { field: 'gender', headerName: 'Gender', width: 125 },
         { field: 'district', headerName: 'District', width: 120 },
-        // { field: 'vilage', headerName: 'Village', width: 130 },
         { field: 'residentialAddress', headerName: 'Address', width: 130 },
         { field: 'email', headerName: 'Email', width: 130 },
         { field: 'phoneNumber', headerName: 'Phone', width: 130 },
         {
-            field: 'action', headerName: 'Action', width: 170, renderCell: (params) => {
+            field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
                         <Link to={"/Teacher/" + params.row.id}>
@@ -68,9 +65,16 @@ function Teachers() {
         <div className="teacherList">
             <div className="topTeachers">
                 <div className="teachersTitle"><h3>Teachers</h3></div>
-                <button className="newTeacher">New Teacher</button>
+                <Link to="/NewTeacher">
+                    <button className="newTeacher">New Teacher</button>
+                </Link>
+
                 <button className="newTeacher">Print Preview</button>
-                <input className="search-teacher" value="Search Teacher" />
+                <div className="btn-search">
+
+                    <input className="search-teacher form-control" value="Search Teacher" />
+                </div>
+
             </div>
 
             <div style={{ height: 700, width: '100%' }}>
@@ -87,3 +91,4 @@ function Teachers() {
     )
 }
 export default Teachers
+

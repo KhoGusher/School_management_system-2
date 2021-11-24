@@ -5,6 +5,9 @@ import { Component } from "react";
 import SideBar from "./ManagerDashBord/MasterHome/SideBar/SideBar";
 import "./App.css"
 import Home from "./ManagerDashBord/MasterHome/Home/Home";
+import Teachers from "./ManagerDashBord/Pages/Teachers/Teachers";
+import SingleTeacher from "./ManagerDashBord/Pages/Teachers/TeacherDeatails/SingleTeacher";
+
 class App extends Component {
   render() {
 
@@ -25,7 +28,7 @@ class App extends Component {
         <TopBar />
         <div className="containers">
           <SideBar />
-          <Home />
+
 
           {/* <Teachers /> */}
           {/* <Home /> */}
@@ -35,13 +38,16 @@ class App extends Component {
               <Client /> */}
 
           <Routes>
+            {/* //<Home /> */}
+            <Route path='/Home' element={<Home />} />
             {/* <Route exact path='/' element={<Login />} />
             {/* <Route path='/dashboard' element={<DashBoard />} /> */}
             {/* <Route path='/customers' element={<CustomersList />} />
             <Route path='/cart' element={<ShoppingCart />} />
-            <Route path='/SignUp' element={<SignUp />} />
+            <Route path='/SignUp' element={<SignUp />} />*/}
             <Route path='/Teachers' element={<Teachers />} />
             <Route path='/Teacher/:teacherId' element={<SingleTeacher />} />
+            {/*<Route path='/Teacher/:teacherId' element={<SingleTeacher />} />
             <Route path='/Subjects' element={<Subjects />} />
             <Route path='/Calendar' element={<Calendar />} />
             <Route path='/Classes' element={<Classes />} />
@@ -52,13 +58,13 @@ class App extends Component {
             <Route path='/Calender' element={<Calendar />} />
             <Route path='/Timetable' element={<Timetable />} />
             <Route path='/Support' element={<Suport />} />
-            <Route path='/Home' element={<Home />} />
+            
 
             <Route path='/*' element={<NoMatchPage />} />  */}
           </Routes>
 
         </div>
-      </BrowserRouter>
+      </BrowserRouter >
     );
   }
 }
