@@ -7,6 +7,7 @@ import "./App.css"
 import Home from "./ManagerDashBord/MasterHome/Home/Home";
 import Teachers from "./ManagerDashBord/Pages/Teachers/Teachers";
 import SingleTeacher from "./ManagerDashBord/Pages/Teachers/TeacherDeatails/SingleTeacher";
+import NewTeacher from "./ManagerDashBord/Pages/Teachers/New Teacher/NewTeacher";
 
 class App extends Component {
   render() {
@@ -47,6 +48,7 @@ class App extends Component {
             <Route path='/SignUp' element={<SignUp />} />*/}
             <Route path='/Teachers' element={<Teachers />} />
             <Route path='/Teacher/:teacherId' element={<SingleTeacher />} />
+            <Route path='/NewTeacher' element={<NewTeacher />} />
             {/*<Route path='/Teacher/:teacherId' element={<SingleTeacher />} />
             <Route path='/Subjects' element={<Subjects />} />
             <Route path='/Calendar' element={<Calendar />} />

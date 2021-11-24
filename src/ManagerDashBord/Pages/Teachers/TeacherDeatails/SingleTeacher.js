@@ -208,7 +208,9 @@ export default function SingleTeacher() {
                                     <span>Picture </span>
                                     <input type="file" id="file" style={{ display: "none" }} />
                                 </div>
+
                                 <button className="userUpdateButton">Update</button>
+
                             </div>
                         </form>
                     </div>
