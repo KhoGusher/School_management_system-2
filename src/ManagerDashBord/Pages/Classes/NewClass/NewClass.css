@@ -3,7 +3,9 @@
   margin-left: 100px;
   margin-top: 20px;
 }
-
+.textfeild{
+  height: 40px !important;
+}
 .newUserForm {
   display: flex;
   flex-wrap: wrap;

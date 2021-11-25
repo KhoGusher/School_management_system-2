@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.subjectDetailsFeild{
+    height: 40px !important;
+}
 .subjectAddBtn{
     width: 80px;
     border: none;
@@ -49,7 +52,7 @@ box-shadow: 0px 0px 11px -1px #000000;
     margin-top: 5px;
 }
 .userShowTopTitle{
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     margin-left: 20px;
 }
@@ -76,6 +79,9 @@ box-shadow: 0px 0px 11px -1px #000000;
 .userUpdateTitle{
     font-size: 24px;
     font-weight: 600;
+    margin-right: 10px;
+    margin-left: 10px;
+
 }
 .name{
     display: flex;

@@ -16,7 +16,7 @@ export default function Students() {
     // `(`manager_id`, `firstName`, `lastName`, `middle_name`, `DOB`, `gender`, `district`, `village`, `current_Address`, `email`,
     //  `phoneNumber`, `rank`, `password`, `school_id`, `master_id`, `nationality`)
     const columns = [
-        // { field: 'id', headerName: 'ID', width: 70 },
+       ,
 
         {
             field: 'firstName', headerName: 'First name', width: 160, renderCell: (params) => {

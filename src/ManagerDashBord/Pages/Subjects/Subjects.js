@@ -40,29 +40,48 @@ export default function Subjects() {
 
     ];
     return (
-        <div className="teacherList">
-            <NewSubject />
-            <div className="topTeachers">
-                <div className="teachersTitle"><h3>Subjects Listing</h3></div>
-                <button className="newSubject">Export Subjects</button>
-                <button className="newSubject">Print Preview</button>
-                <div className="btn-search">
+        <>
 
-                    <input className="search-teacher form-control" value="Search Subject" />
+            <div className="teacherList">
+                <div className="newUser">
+                    <h2 className="newUserTitle">Adding Subject</h2>
+                    <form className="newUserForm">
+                        <div className="newUserItem">
+                            <label>Subject Name</label>
+                            <input className="subjectDetailsAddFeild" type="text" placeholder="chichewa" />
+                        </div>
+                        <div className="newUserItem">
+                            <label>Subject Code</label>
+                            <input className="subjectDetailsAddFeild" type="text" placeholder="chich111" />
+                        </div>
+                        <button className="newUserButton">Add Subject</button>
+                    </form>
                 </div>
 
-            </div>
+                <div className="topTeachers">
+                    <div className="teachersTitle"><h3>Subjects Listing</h3></div>
+                    <button className="newSubject">Export Subjects</button>
+                    <button className="newSubject">Import Subjects</button>
+                    <button className="newSubject">Print Preview</button>
+                    <div className="btn-search">
 
-            <div style={{ height: 700, width: '100%' }}>
-                <DataGrid className="subjectsTable"
-                    rows={teachers}
-                    disableSelectionOnClick
-                    columns={columns}
-                    pageSize={11}
-                    rowsPerPageOptions={[5]}
-                    checkboxSelection
-                />
+                        <input className="search-teacher form-control" value="Search Subject" />
+                    </div>
+
+                </div>
+
+                <div style={{ height: 700, width: '100%' }}>
+                    <DataGrid className="subjectsTable"
+                        rows={teachers}
+                        disableSelectionOnClick
+                        columns={columns}
+                        pageSize={11}
+                        rowsPerPageOptions={[5]}
+                        checkboxSelection
+                    />
+                </div>
             </div>
-        </div>
+        </>
+
     )
 }

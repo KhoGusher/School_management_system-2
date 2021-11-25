@@ -46,6 +46,7 @@ export default function Classes() {
             <div className="topTeachers">
                 <div className="teachersTitle"><h3>Class Listing</h3></div>
                 <button className="newSubject">Export Classes</button>
+                <button className="newSubject">Import Classes</button>
                 <button className="newSubject">Print Preview</button>
                 <div className="btn-search">
 

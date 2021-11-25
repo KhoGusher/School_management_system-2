@@ -18,26 +18,28 @@ export default function SubjectDetails() {
             <div className="subjectTitleContainer">
                 <h3 className="subjectTitle">Subject Details For : Chichewa -chich111</h3>
             </div>
+
             <div className="newUser">
                 <h2 className="newUserTitle">Editing Subject</h2>
                 <form className="newUserForm">
                     <div className="newUserItem">
                         <label>Subject Name</label>
-                        <input type="text" placeholder="chichewa" />
+                        <input className="subjectDetailsFeild" type="text" placeholder="chichewa" />
                     </div>
                     <div className="newUserItem">
                         <label>Subject Code</label>
-                        <input type="text" placeholder="chich111" />
+                        <input className="subjectDetailsFeild" type="text" placeholder="chich111" />
                     </div>
                     <button className="newUserButton">Update</button>
                 </form>
             </div>
+
             <div className="subjectContaine">
                 <div className="subjectShow">
-                    <div className="userShowTopTitle">
+                    <div className="userUpdate">
                         <span className="userUpdateTitle">Students
-                            <input></input></span>
-
+                        </span>
+                        <input value="Seach Student "></input>
                     </div>
 
                     <div className="userShowBottom">
@@ -51,7 +53,7 @@ export default function SubjectDetails() {
                 <div className="subjectUpdate">
                     <div className="userUpdate">
                         <span className="userUpdateTitle">Teachers</span>
-                        <input></input>
+                        <input Value="Seach Teacher"></input>
                         <form className="userUpdateForm">
                             <div className="userUpdateLeft">
                                 <div className="userUpdateItem">
