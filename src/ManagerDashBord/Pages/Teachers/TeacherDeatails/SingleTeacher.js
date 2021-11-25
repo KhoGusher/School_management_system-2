@@ -88,7 +88,8 @@ export default function SingleTeacher() {
                         <form className="userUpdateForm">
                             <div className="userUpdateLeft">
                                 <div className="userUpdateItem">
-                                    <label>FistName</label>
+                                    <label className="teacherlabes">FistName</label>
+
                                     <input
                                         type="text"
                                         placeholder="stephano"
@@ -121,17 +122,20 @@ export default function SingleTeacher() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Gender</label>
-                                    <input
-                                        type="radio"
-                                        name="gender" id="male" value="male"
-                                    />
-                                    <label for="male">Male</label>
-                                    <input
-                                        type="radio"
-                                        name="gender" id="female" value="female"
-                                    />
-                                    <label for="female">Female</label>
+                                    <div className="gender">
+                                        <label>Gender</label>
+                                        <input className="radio"
+                                            type="radio"
+                                            name="gender" id="male" value="male"
+                                        />
+                                        <label for="male">Male</label>
+                                        <input className="radio"
+                                            type="radio"
+                                            name="gender" id="female" value="female"
+                                        />
+                                        <label for="female">Female</label>
+                                    </div>
+
                                 </div>
                                 <div className="userUpdateItem">
                                     <label>District</label>
@@ -150,7 +154,7 @@ export default function SingleTeacher() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Residential Address</label>
+                                    <label>Residential Add</label>
                                     <input
                                         type="text"
                                         placeholder="Chikanda"
@@ -182,8 +186,8 @@ export default function SingleTeacher() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Subjects:</label>
-                                    <label>chichewa8,english8,english5,</label>
+                                    <label>Subjects : </label>
+                                    <label className="label">chichewa8,english8,english5</label>
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">chich5</option>
                                         <option value="chich2">eng6</option>
@@ -205,11 +209,11 @@ export default function SingleTeacher() {
                                     <label htmlFor="file">
                                         <Publish className="userUpdateIcon" />
                                     </label>
-                                    <span>Picture </span>
+                                    <span >Picture </span>
                                     <input type="file" id="file" style={{ display: "none" }} />
                                 </div>
 
-                                <button className="userUpdateButton">Update</button>
+                                <button className="teacherUpdatebtn">Update</button>
 
                             </div>
                         </form>

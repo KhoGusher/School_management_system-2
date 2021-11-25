@@ -68,9 +68,12 @@ function Teachers() {
                 <div className="teachersTitle"><h3>Teachers</h3></div>
                 <Link to="/NewTeacher">
                     <button className="newTeacher">New Teacher</button>
+
                 </Link>
 
                 <button className="newTeacher">Print Preview</button>
+                <button className="newTeacher">Import Teachers</button>
+                <button className="newTeacher">Export Teachers</button>
                 <div className="btn-search">
 
                     <input className="search-teacher form-control" value="Search Teacher" />

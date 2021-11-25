@@ -25,6 +25,7 @@
 .teacherShow{
 flex: 1;
 padding: 20;
+margin-left: 10px;
 align-items: center;
 -webkit-box-shadow:0px 0px 11px -1px #000000;
 box-shadow: 0px 0px 11px -1px #000000;
@@ -62,7 +63,7 @@ box-shadow: 0px 0px 11px -1px #000000;
 .userShowInfo{
     display: flex;
     align-items: center;
-    margin: 20px 0px;
+    margin-left: 10px !important;
     color: #444;
 }
 .userShowIcon{
@@ -81,14 +82,23 @@ box-shadow: 0px 0px 11px -1px #000000;
 }
 .userUpdateForm{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
+
 
 .userUpdateItem{
     display: flex;
      flex-direction: row; 
     margin-top: 10px;
+}
+.userUpdateItem > label{
+    margin-top: 12px !important;
+}
+.radio{
+margin-top: 10px;
+margin-left: 10px;
 }
 
 .userUpdateItem>label{
@@ -97,6 +107,7 @@ box-shadow: 0px 0px 11px -1px #000000;
 }
 
 .userUpdateInput{
+    margin-left: 20px;
     border: none;
     width: 250px;
     height: 30px;
@@ -126,7 +137,7 @@ box-shadow: 0px 0px 11px -1px #000000;
     cursor: pointer;
 }
 
-.userUpdateButton{
+.teacherUpdatebtn{
     border-radius: 5px;
     border: none;
     padding: 5px;
@@ -134,4 +145,8 @@ box-shadow: 0px 0px 11px -1px #000000;
     background-color: darkblue;
     color: white;
     font-weight: 600;
+    margin-top: 415px;
+}
+.label{
+    margin-right: 20px;
 }

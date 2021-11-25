@@ -10,7 +10,7 @@ import SingleTeacher from "./ManagerDashBord/Pages/Teachers/TeacherDeatails/Sing
 import NewTeacher from "./ManagerDashBord/Pages/Teachers/New Teacher/NewTeacher";
 import Subjects from "./ManagerDashBord/Pages/Subjects/Subjects";
 import Classes from "./ManagerDashBord/Pages/Classes/Classes";
-import Students from "./ManagerDashBord/Pages/Students/Students";
+import Students from "./ManagerDashBord/Pages/Students/StudentList"
 import Calendar from "./ManagerDashBord/Pages/Calender/Calendar"
 import Guardians from "./ManagerDashBord/Pages/Guardians/Guardians"
 import Ranks from "./ManagerDashBord/Pages/Ranks/Ranks"
@@ -76,8 +76,8 @@ class App extends Component {
             <Route path='/Guardians' element={<Guardians />} />
             <Route path='/Ranks' element={<Ranks />} />
             <Route path='/Candidates' element={<Candidates />} />
-            <Route path='/Timetable' element={<Timetable />} />
-            <Route path='/Support' element={<Suport />} />
+            <Route path='/Timetables' element={<Timetable />} />
+            <Route path='/Supports' element={<Suport />} />
             <Route path='/*' element={<NoMatchPage />} />
 
             {/* admin student view routes */}

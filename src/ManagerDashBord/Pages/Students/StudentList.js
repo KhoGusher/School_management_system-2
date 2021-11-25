@@ -1,23 +1,20 @@
 import React from 'react'
-import "./Students.css"
+import "./StudentsList.css"
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
 import { Teacherrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
-export default function Students() {
+
+function StudentList() {
     const [teachers, setTeachers] = useState(Teacherrows);
-    //delete teacher function
+    //delete student function
     const handleTecherDelete = (id) => {
         setTeachers(teachers.filter((item) => item.id !== id));
     };
 
-    // `(`manager_id`, `firstName`, `lastName`, `middle_name`, `DOB`, `gender`, `district`, `village`, `current_Address`, `email`,
-    //  `phoneNumber`, `rank`, `password`, `school_id`, `master_id`, `nationality`)
     const columns = [
-       ,
-
         {
             field: 'firstName', headerName: 'First name', width: 160, renderCell: (params) => {
                 return (
@@ -39,40 +36,32 @@ export default function Students() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-
-                        <Link to={"/Student/" + params.row.id}>
+                        <Link to={"/Teacher/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
-                        <Link to={"/Student/" + params.row.id}>
+                        <Link to={"/Teacher/" + params.row.id}>
                             <Edit className="teacherEdit" />
                         </Link>
-
                         <DeleteOutline className="teacherDelete" onClick={() => handleTecherDelete(params.row.id)} />
                     </>
 
                 )
             }
         },
-        // {field: 'nationality', headerName: 'Last name', width: 130 },
-        // {
-        //     field: 'fullName',
-        //     headerName: 'Full name',
-        //     description: 'This column has a value getter and is not sortable.',
-        //     sortable: false,
-        //     width: 160,
 
-        // },
     ];
     return (
-
         <div className="teacherList">
             <div className="topTeachers">
                 <div className="teachersTitle"><h3>Students</h3></div>
-                <Link to="/NewStudent">
+                <Link to="/NewTeacher">
                     <button className="newTeacher">New Student</button>
+
                 </Link>
 
                 <button className="newTeacher">Print Preview</button>
+                <button className="newTeacher">Import Students</button>
+                <button className="newTeacher">Export Students</button>
                 <div className="btn-search">
 
                     <input className="search-teacher form-control" value="Search Student" />
@@ -91,6 +80,7 @@ export default function Students() {
                 />
             </div>
         </div>
-
     )
 }
+export default StudentList
+

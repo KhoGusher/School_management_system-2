@@ -8,44 +8,44 @@ export default function NewTeacher() {
             <form className="newUserForm">
                 <div className="newUserItem">
                     <label>Fist Name</label>
-                    <input type="text" placeholder="mabziness" />
+                    <input className="teacherfield" type="text" placeholder="mabziness" />
                 </div>
                 <div className="newUserItem">
                     <label>Last Name</label>
-                    <input type="text" placeholder="patrick" />
+                    <input className="teacherfield" type="text" placeholder="patrick" />
                 </div>
                 <div className="newUserItem">
                     <label>Middle Name</label>
-                    <input type="text" placeholder="mabziness" />
+                    <input className="teacherfield" type="text" placeholder="mabziness" />
                 </div>
                 <div className="newUserItem">
                     <label>Date Of Birth</label>
-                    <input type="text" placeholder="14-04-2000" />
+                    <input className="teacherfield" type="text" placeholder="14-04-2000" />
                 </div>
                 <div className="newUserItem">
                     <label>Email</label>
-                    <input type="email" placeholder="patrickmabziness@gmail.com" />
+                    <input className="teacherfield" type="email" placeholder="patrickmabziness@gmail.com" />
                 </div>
                 <div className="newUserItem">
                     <label>Phone</label>
-                    <input type="text" placeholder="+265 999" />
+                    <input className="teacherfield" type="text" placeholder="+265 999" />
                 </div>
                 <div className="newUserItem">
                     <label>Nationality</label>
-                    <input type="text" placeholder="Malawi" />
+                    <input className="teacherfield" type="text" placeholder="Malawi" />
                 </div>
                 <div className="newUserItem">
                     <label>District</label>
-                    <input type="text" placeholder="Zomba" />
+                    <input className="teacherfield" type="text" placeholder="Zomba" />
                 </div>
 
                 <div className="newUserItem">
                     <label>Village Of Origin</label>
-                    <input type="text" placeholder="Khuvinda" />
+                    <input className="teacherfield" type="text" placeholder="Khuvinda" />
                 </div>
                 <div className="newUserItem">
                     <label>Residential Address</label>
-                    <input type="text" placeholder="Chikanda" />
+                    <input className="teacherfield" type="text" placeholder="Chikanda" />
                 </div>
                 <div className="newUserItem">
                     <label>Gender</label>
@@ -59,7 +59,7 @@ export default function NewTeacher() {
                 </div>
                 <div className="newUserItem">
                     <label>Password</label>
-                    <input type="password" placeholder="password" />
+                    <input className="teacherfield" type="password" placeholder="password" />
                 </div>
                 <div className="newUserItem">
                     <label>Rank</label>
@@ -78,7 +78,7 @@ export default function NewTeacher() {
                         <option value="no">Eng8</option>
                     </select>
                 </div>
-                <button className="newUserButton">Create</button>
+                <button className="newUserButton">Add</button>
             </form>
         </div>
     )
