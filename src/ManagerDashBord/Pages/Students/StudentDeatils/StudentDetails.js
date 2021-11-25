@@ -78,9 +78,11 @@ export default function StudentDetails() {
                         <span className="userShowTitle">Guardian Details</span>
                         <div className="userShowInfo">
                             <MailOutline className="userShowIcon" />
-                            <span className="userShowInfoTitle">Guardian Name : patrick mabziness</span>
+                            <Link><span className="userShowInfoTitle">
+                                Guardian Name : patrick mabziness</span>
+                            </Link>
                             <span>Phone Number :98447484</span>
-                            <button>Guardian Details</button>
+
                         </div>
 
                     </div>

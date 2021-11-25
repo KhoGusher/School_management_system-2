@@ -24,8 +24,10 @@ import NewSubject from "./ManagerDashBord/Pages/Subjects/NewSubject/NewSubject";
 import SubjectDetails from "./ManagerDashBord/Pages/Subjects/SubjectDetails/SubjectDetails";
 import NewClass from "./ManagerDashBord/Pages/Classes/NewClass/NewClass";
 import ClassDetails from "./ManagerDashBord/Pages/Classes/ClassDetails/ClassDetails";
-import GuardianDetails from "./ManagerDashBord/Pages/Guardians/Guardians"
+import GuardianDetails from "./ManagerDashBord/Pages/Guardians/GuardianDetails/GuardianDetails"
 import NewGuardian from "./ManagerDashBord/Pages/Guardians/New Guardian/NewGuardian"
+import CandidateDetails from "./ManagerDashBord/Pages/Candidates/Candidate Details/CandidateDetails";
+import RankDetails from "./ManagerDashBord/Pages/Ranks/RankDetails/RankDetails";
 
 
 
@@ -97,6 +99,12 @@ class App extends Component {
             {/* admin guardian view */}
             <Route path='/NewGuardian' element={<NewGuardian />} />
             <Route path='/Guardian/:guardianid' element={<GuardianDetails />} />
+
+            {/* admin candidate view */}
+            <Route path='/Candidate/:candidateid' element={<CandidateDetails />} />
+
+            {/* admin rank view */}
+            <Route path='/Rank/:candidateid' element={<RankDetails />} />
 
 
           </Routes>

@@ -39,10 +39,10 @@ export default function Guardians() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/Teacher/" + params.row.id}>
+                        <Link to={"/Guardian/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
-                        <Link to={"/Teacher/" + params.row.id}>
+                        <Link to={"/Guardian/" + params.row.id}>
                             <Edit className="teacherEdit" />
                         </Link>
                         <DeleteOutline className="teacherDelete" onClick={() => handleTecherDelete(params.row.id)} />

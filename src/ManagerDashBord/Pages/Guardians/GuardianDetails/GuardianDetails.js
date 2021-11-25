@@ -16,10 +16,8 @@ export default function StudentDetails() {
 
         <div className="teacher">
             <div className="teacherTitleContainer">
-                <h3 className="teacherTitle">Student Details</h3>
-                <Link to="/Home">
-                    <button className="teacherAddBtn"> New Student</button>
-                </Link>
+                <h3 className="teacherTitle">Guardian Details</h3>
+
 
             </div>
             <div className="teacherContaine">
@@ -30,7 +28,7 @@ export default function StudentDetails() {
                     <div className="userShowBottom"></div>
                     <div className="userShowTopTitle">
                         <span className="userShowUserName">macheda junior patrick</span>
-                        <span className="userShowUserTitle">Teacher</span>
+
                     </div>
                     <div className="userShowBottom">
                         <span className="userShowTitle">Account Details</span>
@@ -69,14 +67,19 @@ export default function StudentDetails() {
                             <MailOutline className="userShowIcon" />
                             <span className="userShowInfoTitle">Email : patrickmabziness@gmail.com</span>
                         </div>
-                        <span className="userShowTitle">Classes /Subjects</span>
+                        <span className="userShowTitle">Students</span>
 
                         <div className="userShowInfo">
                             <PhoneAndroid className="userShowIcon" />
                             <span className="userShowInfoTitle">Std 8-</span>
-                            <span className="userShowInfoTitle">Subjects : chichewa,english,</span>
+                            <Link to="/Student">
+                                <span className="userShowInfoTitle">1.Steohano patrick</span>
+                            </Link>
+
                             <span className="userShowInfoTitle">Std 5-</span>
-                            <span className="userShowInfoTitle">Subjects : english,</span>
+                            <Link to="/Student">
+                                <li className="userShowInfoTitle">2.Maxon Gomeka</li>
+                            </Link>
                         </div>
 
                     </div>
@@ -182,16 +185,18 @@ export default function StudentDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Subjects:</label>
-                                    <label>chichewa8,english8,english5,</label>
+                                    <label>Students:</label>
+
                                     <select className="newUserSelect" name="active" id="active">
-                                        <option value="chich1">chich5</option>
-                                        <option value="chich2">eng6</option>
-                                        <option value="chich2">eng7</option>
-                                        <option value="chich2">eng8</option>
-                                        <option value="chich2">chich2</option>
-                                        <option value="chich2">chich1</option>
+                                        <option value="chich1">ma</option>
+                                        <option value="chich2">na</option>
+                                        <option value="chich2">ch</option>
+                                        <option value="chich2">na</option>
+                                        <option value="chich2">mun</option>
+                                        <option value="chich2">mm</option>
+
                                     </select>
+                                    <input value="Search Student" type="text"></input>
                                 </div>
 
                             </div>
