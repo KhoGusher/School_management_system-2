@@ -24,6 +24,8 @@ import NewSubject from "./ManagerDashBord/Pages/Subjects/NewSubject/NewSubject";
 import SubjectDetails from "./ManagerDashBord/Pages/Subjects/SubjectDetails/SubjectDetails";
 import NewClass from "./ManagerDashBord/Pages/Classes/NewClass/NewClass";
 import ClassDetails from "./ManagerDashBord/Pages/Classes/ClassDetails/ClassDetails";
+import GuardianDetails from "./ManagerDashBord/Pages/Guardians/Guardians"
+import NewGuardian from "./ManagerDashBord/Pages/Guardians/New Guardian/NewGuardian"
 
 
 
@@ -91,6 +93,12 @@ class App extends Component {
             {/* admin class view */}
             <Route path='/NewClass' element={<NewClass />} />
             <Route path='/Class/:classid' element={<ClassDetails />} />
+
+            {/* admin guardian view */}
+            <Route path='/NewGuardian' element={<NewGuardian />} />
+            <Route path='/Guardian/:guardianid' element={<GuardianDetails />} />
+
+
           </Routes>
 
         </div>

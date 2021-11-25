@@ -2,13 +2,13 @@ import React from 'react'
 import "./StudentsList.css"
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
-import { Teacherrows } from "../../../dummyData"
+import { Studentrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
 
 function StudentList() {
-    const [teachers, setTeachers] = useState(Teacherrows);
+    const [teachers, setTeachers] = useState(Studentrows);
     //delete student function
     const handleTecherDelete = (id) => {
         setTeachers(teachers.filter((item) => item.id !== id));
@@ -36,10 +36,10 @@ function StudentList() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/Teacher/" + params.row.id}>
+                        <Link to={"/Student/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
-                        <Link to={"/Teacher/" + params.row.id}>
+                        <Link to={"/Student/" + params.row.id}>
                             <Edit className="teacherEdit" />
                         </Link>
                         <DeleteOutline className="teacherDelete" onClick={() => handleTecherDelete(params.row.id)} />
@@ -54,7 +54,7 @@ function StudentList() {
         <div className="teacherList">
             <div className="topTeachers">
                 <div className="teachersTitle"><h3>Students</h3></div>
-                <Link to="/NewTeacher">
+                <Link to="/NewStudent">
                     <button className="newTeacher">New Student</button>
 
                 </Link>

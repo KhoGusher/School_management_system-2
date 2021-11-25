@@ -1,3 +1,61 @@
-.guardians{
+.teacherList {
     flex: 7;
-}
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+  }
+  
+  .topTeachers{
+     display: flex;
+     justify-content: space-between;
+     margin-top: 10px;
+    
+  }
+  .btn-search{
+    display: flex;
+    height: 100%;
+    padding: 0px 20px;
+    align-items: center;
+    margin-top: 3px;
+  }
+  .newTeacher{
+    width: 135px !important;
+    height: 40px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .teacherListFirst {
+    display: flex;
+    align-items: center;
+  }
+  
+  .teachersPic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .teacherEdit{
+      border: none;
+      color: black;
+      cursor: pointer;
+      margin-right: 5px;
+  }
+  
+  .teacherDelete{
+      color: red;
+      cursor: pointer;
+  }
+  .teachersTable{
+      margin-top: 20px;
+      
+  }

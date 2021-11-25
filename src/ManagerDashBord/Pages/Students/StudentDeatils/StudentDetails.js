@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./StudentDetails.css"
 import profile from "./profile.jpg"
 import {
     CalendarToday,
@@ -17,9 +17,7 @@ export default function StudentDetails() {
         <div className="teacher">
             <div className="teacherTitleContainer">
                 <h3 className="teacherTitle">Student Details</h3>
-                <Link to="/Home">
-                    <button className="teacherAddBtn"> New Student</button>
-                </Link>
+
 
             </div>
             <div className="teacherContaine">
@@ -29,8 +27,8 @@ export default function StudentDetails() {
                     </div>
                     <div className="userShowBottom"></div>
                     <div className="userShowTopTitle">
-                        <span className="userShowUserName">macheda junior patrick</span>
-                        <span className="userShowUserTitle">Teacher</span>
+                        <span className="userShowUserName">Stepahno junior patrick</span>
+
                     </div>
                     <div className="userShowBottom">
                         <span className="userShowTitle">Account Details</span>
@@ -75,8 +73,14 @@ export default function StudentDetails() {
                             <PhoneAndroid className="userShowIcon" />
                             <span className="userShowInfoTitle">Std 8-</span>
                             <span className="userShowInfoTitle">Subjects : chichewa,english,</span>
-                            <span className="userShowInfoTitle">Std 5-</span>
-                            <span className="userShowInfoTitle">Subjects : english,</span>
+
+                        </div>
+                        <span className="userShowTitle">Guardian Details</span>
+                        <div className="userShowInfo">
+                            <MailOutline className="userShowIcon" />
+                            <span className="userShowInfoTitle">Guardian Name : patrick mabziness</span>
+                            <span>Phone Number :98447484</span>
+                            <button>Guardian Details</button>
                         </div>
 
                     </div>
@@ -88,7 +92,8 @@ export default function StudentDetails() {
                         <form className="userUpdateForm">
                             <div className="userUpdateLeft">
                                 <div className="userUpdateItem">
-                                    <label>FistName</label>
+                                    <label className="teacherlabes">FistName</label>
+
                                     <input
                                         type="text"
                                         placeholder="stephano"
@@ -121,17 +126,20 @@ export default function StudentDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Gender</label>
-                                    <input
-                                        type="radio"
-                                        name="gender" id="male" value="male"
-                                    />
-                                    <label for="male">Male</label>
-                                    <input
-                                        type="radio"
-                                        name="gender" id="female" value="female"
-                                    />
-                                    <label for="female">Female</label>
+                                    <div className="gender">
+                                        <label>Gender</label>
+                                        <input className="radio"
+                                            type="radio"
+                                            name="gender" id="male" value="male"
+                                        />
+                                        <label for="male">Male</label>
+                                        <input className="radio"
+                                            type="radio"
+                                            name="gender" id="female" value="female"
+                                        />
+                                        <label for="female">Female</label>
+                                    </div>
+
                                 </div>
                                 <div className="userUpdateItem">
                                     <label>District</label>
@@ -150,7 +158,7 @@ export default function StudentDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Residential Address</label>
+                                    <label>Residential Add</label>
                                     <input
                                         type="text"
                                         placeholder="Chikanda"
@@ -182,8 +190,20 @@ export default function StudentDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Subjects:</label>
-                                    <label>chichewa8,english8,english5,</label>
+                                    <label>Class </label>
+
+                                    <select className="newUserSelect" name="active" id="active">
+                                        <option value="chich1">std1</option>
+                                        <option value="chich2">std3</option>
+                                        <option value="chich2">std4</option>
+                                        <option value="chich2">std4</option>
+                                        <option value="chich2">std7</option>
+                                        <option value="chich2">std8</option>
+                                    </select>
+                                </div>
+                                <div className="userUpdateItem">
+                                    <label>Subjects : </label>
+                                    <label className="label">chichewa8,english8,english5</label>
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">chich5</option>
                                         <option value="chich2">eng6</option>
@@ -193,6 +213,20 @@ export default function StudentDetails() {
                                         <option value="chich2">chich1</option>
                                     </select>
                                 </div>
+                                <div className="userUpdateItem">
+                                    <label>Guardian  </label>
+
+                                    <select className="newUserSelect" name="active" id="active">
+                                        <option value="chich1">Frola</option>
+                                        <option value="chich2">Luhanga</option>
+                                        <option value="chich2">Nantchito</option>
+                                        <option value="chich2">Gomaks</option>
+                                        <option value="chich2">Patrick</option>
+
+                                    </select>
+                                    <input Value="Search Guardian"></input>
+                                </div>
+
 
                             </div>
                             <div className="userUpdateRight">
@@ -205,11 +239,11 @@ export default function StudentDetails() {
                                     <label htmlFor="file">
                                         <Publish className="userUpdateIcon" />
                                     </label>
-                                    <span>Picture </span>
+                                    <span >Picture </span>
                                     <input type="file" id="file" style={{ display: "none" }} />
                                 </div>
 
-                                <button className="userUpdateButton">Update</button>
+                                <button className="teacherUpdatebtn">Update</button>
 
                             </div>
                         </form>

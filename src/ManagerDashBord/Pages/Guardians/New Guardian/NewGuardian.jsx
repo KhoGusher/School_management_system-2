@@ -1,10 +1,10 @@
 import React from 'react'
-import "./NewStudent.css"
+import "./NewGuardian.css"
 
-export default function NewStudent() {
+export default function NewTeacher() {
     return (
         <div className="newUser">
-            <h1 className="newUserTitle">New Student</h1>
+            <h1 className="newUserTitle">New Guardian</h1>
             <form className="newUserForm">
                 <div className="newUserItem">
                     <label>Fist Name</label>
@@ -48,14 +48,6 @@ export default function NewStudent() {
                     <input className="teacherfield" type="text" placeholder="Chikanda" />
                 </div>
                 <div className="newUserItem">
-                    <label>Registration Number</label>
-                    <input className="teacherfield" type="text" placeholder="Bsc/com" />
-                </div>
-                <div className="newUserItem">
-                    <label>Guardian Number</label>
-                    <input className="teacherfield" type="text" placeholder="0999 88 35" />
-                </div>
-                <div className="newUserItem">
                     <label>Gender</label>
                     <div className="newUserGender">
                         <input type="radio" name="gender" id="male" value="male" />
@@ -70,34 +62,33 @@ export default function NewStudent() {
                     <input className="teacherfield" type="password" placeholder="password" />
                 </div>
                 <div className="newUserItem">
-                    <label>Number Of Attempts</label>
+                    <label>Rank</label>
                     <select className="newUserSelect" name="active" id="active">
-                        <option value="yes">1</option>
-                        <option value="yes">2</option>
-                        <option value="yes">3</option>
+                        <option value="yes">admin</option>
+                        <option value="yes">PT head</option>
+                        <option value="yes">PT member</option>
                     </select>
                 </div>
                 <div className="newUserItem">
-                    <label>Class</label>
+                    <label>Subjects</label>
                     <select className="newUserSelect" name="active" id="active">
-                        <option value="yes">std1</option>
-                        <option value="no">std7</option>
-                        <option value="no">std8</option>
-                        <option value="no">std5</option>
+                        <option value="yes">Chich1</option>
+                        <option value="no">Chich5</option>
+                        <option value="no">Eng4</option>
+                        <option value="no">Eng8</option>
                     </select>
                 </div>
                 <div className="newUserItem">
-                    <label>Add Guardian</label>
+                    <label>Students</label>
                     <select className="newUserSelect" name="active" id="active">
-                        <option value="yes">Frola</option>
-                        <option value="no">Luka</option>
-                        <option value="no">Nantchito</option>
-                        <option value="no">Chisopa</option>
+                        <option value="yes">Mabziness</option>
+                        <option value="yes">Maxon</option>
+                        <option value="yes">Kondwani</option>
                     </select>
                 </div>
                 <div className="newUserItem">
-                    <label>Search Guardian</label>
-                    <input className="teacherfield" type="text" placeholder="Guardian" />
+                    <label>Search A Student</label>
+                    <input className="teacherfield" type="password" placeholder="Search Student" />
                 </div>
                 <button className="newUserButton">Add</button>
             </form>
