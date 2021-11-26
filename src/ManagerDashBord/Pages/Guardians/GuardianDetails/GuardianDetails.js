@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./GuardianDetails.css"
 import profile from "./profile.jpg"
 import {
     CalendarToday,
@@ -185,7 +185,7 @@ export default function StudentDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Students:</label>
+                                    <label className="studentlabel">Students:</label>
 
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">ma</option>

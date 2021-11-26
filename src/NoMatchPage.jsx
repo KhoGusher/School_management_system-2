@@ -4,7 +4,7 @@ import "./NoMatchPage.css"
 export default function NoMatchPage() {
     return (
         <div className="nomatchpage">
-            Page not found
+            <h1> Page not found</h1>
         </div>
     )
 }

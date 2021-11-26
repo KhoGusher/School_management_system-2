@@ -78,10 +78,11 @@ export default function StudentDetails() {
                         <span className="userShowTitle">Guardian Details</span>
                         <div className="userShowInfo">
                             <MailOutline className="userShowIcon" />
-                            <Link><span className="userShowInfoTitle">
-                                Guardian Name : patrick mabziness</span>
-                            </Link>
-                            <span>Phone Number :98447484</span>
+                            <span className="userShowInfoTitle">
+                                Guardian Name :<Link> patrick mabziness</Link>
+                            </span>
+
+                            <span> -Phone Number :98447484</span>
 
                         </div>
 
@@ -192,7 +193,7 @@ export default function StudentDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Class </label>
+                                    <label className="labelclass">Class </label>
 
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">std1</option>
@@ -216,7 +217,7 @@ export default function StudentDetails() {
                                     </select>
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Guardian  </label>
+                                    <label className="guardianlb">Guardian  </label>
 
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">Frola</option>

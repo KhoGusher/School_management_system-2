@@ -103,10 +103,10 @@ export default function CandidateDetails() {
                         <span className="userShowTitle">Guardian Details</span>
                         <div className="userShowInfo">
                             <MailOutline className="userShowIcon" />
-                            <Link><span className="userShowInfoTitle">
-                                Guardian Name : patrick mabziness</span>
-                            </Link>
-                            <span>Phone Number :98447484</span>
+                            <span className="userShowInfoTitle">
+                                Guardian Name :<Link> patrick mabziness</Link></span>
+
+                            <span>-Phone Number :98447484</span>
 
                         </div>
 
@@ -217,7 +217,7 @@ export default function CandidateDetails() {
                                     />
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Class </label>
+                                    <label className="labelclass">Class </label>
 
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">std1</option>
@@ -255,7 +255,7 @@ export default function CandidateDetails() {
                                     <label for="female">External</label>
                                 </div>
                                 <div className="userUpdateItem">
-                                    <label>Number Of Attempts  </label>
+                                    <label className="labelclass">Number Of Attempts  </label>
 
                                     <select className="newUserSelect" name="active" id="active">
                                         <option value="chich1">1</option>
@@ -271,8 +271,8 @@ export default function CandidateDetails() {
                                     <label>Guardian  </label>
 
                                     <select className="newUserSelect" name="active" id="active">
-                                        <option value="chich1">Frola</option>
-                                        <option value="chich2">Luhanga</option>
+                                        <option value="chich1">Frola luka</option>
+                                        <option value="chich2">Luhanga luhanga</option>
                                         <option value="chich2">Nantchito</option>
                                         <option value="chich2">Gomaks</option>
                                         <option value="chich2">Patrick</option>
