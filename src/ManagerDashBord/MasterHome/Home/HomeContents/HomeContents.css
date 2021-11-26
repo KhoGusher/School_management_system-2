@@ -1,3 +1,7 @@
+.home{
+  margin-left: 50px;
+  margin-right: 50px;
+}
 .HomeContents {
     width: 100%;
     display: flex;
@@ -6,7 +10,7 @@
   }
   .card-img-top{
       width: 300px;
-      height: 100px;
+      height: 100px; 
   }
   
   .homeContentIterm {
@@ -17,6 +21,11 @@
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    width: 300px;
+    height: 400px;
+  }
+  .icon{
+    /* width: 1000px !important; */
   }
   
   .homeContenterContents{

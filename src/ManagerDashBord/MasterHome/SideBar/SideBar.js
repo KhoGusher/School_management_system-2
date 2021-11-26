@@ -3,6 +3,10 @@ import "./SideBar.css"
 import { LineStyle } from '@material-ui/icons';
 import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAmbulance, list } from '@fortawesome/free-solid-svg-icons'
+
+
 
 function SideBar() {
     return (
@@ -12,6 +16,7 @@ function SideBar() {
                 <div className="sidebarMenu">
                     <div className="dashbord">
                         <h3 className="sidebarTittle">Dashboard</h3>
+                        <FontAwesomeIcon icon={list} color="green" />
                         <LineStyle className=" sidebarIcon hidesidebar" />
                     </div>
                     <div className="userShowTop">

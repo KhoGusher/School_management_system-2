@@ -2,15 +2,23 @@ import React from 'react'
 import "./HomeContents.css"
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 import Pic from "./mab.jpg"
+import Teacher from "./teacher.png"
+import Student from "./student.png"
+import Subjects from "./subjects.png"
+import Classe from "./classes.jpg"
+import Ranking from "./ranking.jpg"
+import School from "./school.png"
 import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function HomeContents() {
     return (
-        <div>
+        <div className="home">
             <div className="HomeContents">
-                <Link to="/Teachers">
+                <Link to="/Teachers" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Pic} className="card-img-top" alt="" />
+                        {/* className="card-img-top" */}
+                        <img src={Teacher} alt="" />
                         <span className="homeContentitermTitle">Teachers</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Males:12</span>
@@ -18,9 +26,9 @@ export default function HomeContents() {
                         <span className="homeContenterContentsSub">Females:12</span>
                     </div>
                 </Link>
-                <Link to="/Students">
+                <Link to="/Students" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Pic} className="card-img-top" alt="" />
+                        <img src={Student} alt="" />
                         <span className="homeContentitermTitle">Students</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Males:22</span>
@@ -28,9 +36,9 @@ export default function HomeContents() {
                         <span className="homeContenterContentsSub">Females:2</span>
                     </div>
                 </Link>
-                <Link to="/Candidates">
+                <Link to="/Candidates" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Pic} className="card-img-top" alt="" />
+                        <img src={Student} alt="" />
                         <span className="homeContentitermTitle">Candidates</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Males:1</span>
@@ -49,10 +57,10 @@ export default function HomeContents() {
                 </div>
             </div> */}
             </div>
-            <div className="HomeContents">
+            <div className="HomeContents" style={{ textDecoration: 'none' }}>
                 <Link to="/Subjects">
                     <div className="homeContentIterm">
-                        <img src={Pic} className="card-img-top" alt="" />
+                        <img src={Subjects} alt="" />
                         <span className="homeContentitermTitle">Subjects</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Total:10</span>
@@ -60,9 +68,9 @@ export default function HomeContents() {
 
                     </div>
                 </Link>
-                <Link to="/Classes">
+                <Link to="/Classes" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Pic} className="card-img-top" alt="" />
+                        <img src={School} alt="" />
                         <span className="homeContentitermTitle">Classes</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Total:</span>
@@ -70,9 +78,9 @@ export default function HomeContents() {
 
                     </div>
                 </Link>
-                <Link to="/Ranks">
+                <Link to="/Ranks" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Pic} className="card-img-top" alt="" />
+                        <img src={Ranking} alt="" />
                         <span className="homeContentitermTitle">Ranks</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Total:13</span>
