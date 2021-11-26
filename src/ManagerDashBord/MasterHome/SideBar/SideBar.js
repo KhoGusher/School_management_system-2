@@ -1,10 +1,10 @@
 import React from 'react'
 import "./SideBar.css"
-import { LineStyle } from '@material-ui/icons';
+import { FaAlignJustify, FaCalendarDay, FaHome, FaChalkboardTeacher,FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
+import { MdSubject, MdClass, MdPeople, MdTimer, MdSupport } from 'react-icons/md'
 import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAmbulance, list } from '@fortawesome/free-solid-svg-icons'
+
 
 
 
@@ -16,8 +16,7 @@ function SideBar() {
                 <div className="sidebarMenu">
                     <div className="dashbord">
                         <h3 className="sidebarTittle">Dashboard</h3>
-                        <FontAwesomeIcon icon={list} color="green" />
-                        <LineStyle className=" sidebarIcon hidesidebar" />
+                        <FaAlignJustify className=" sidebarIcon hidesidebar" />
                     </div>
                     <div className="userShowTop">
                         <img src={profile} alt="" className="userShowImage"></img>
@@ -26,69 +25,69 @@ function SideBar() {
                     <ul className="sidebarList">
                         <li className="sidebarListItem active">
                             <Link to="/Home">
-                                <LineStyle className="sidebarIcon" />
+                                <FaHome className="sidebarIcon" />
                                 Home
                             </Link>
                         </li>
                         {/* end of home */}
                         <li className="sidebarListItem">
                             <Link to="/Subjects">
-                                <LineStyle className="sidebarIcon" />
+                                <MdSubject className="sidebarIcon" />
                                 Subjects
                             </Link>
 
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Classes">
-                                <LineStyle className="sidebarIcon" />
+                                <MdClass className="sidebarIcon" />
                                 Classes
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Teachers">
-                                <LineStyle className="sidebarIcon" />
+                                <FaChalkboardTeacher className="sidebarIcon" />
                                 Teachers
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Students">
-                                <LineStyle className="sidebarIcon" />
+                                <MdPeople className="sidebarIcon" />
                                 Students
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Guardians">
-                                <LineStyle className="sidebarIcon" />
+                                <MdPeople className="sidebarIcon" />
                                 Guardians
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Ranks">
-                                <LineStyle className="sidebarIcon" />
+                                <FaCodeBranch className="sidebarIcon" />
                                 Ranks
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Candidates">
-                                <LineStyle className="sidebarIcon" />
+                                <FaUserGraduate className="sidebarIcon" />
                                 Candidates
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Calender">
-                                <LineStyle className="sidebarIcon" />
+                                <FaCalendarDay className="sidebarIcon" />
                                 Calendar
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Timetable">
-                                <LineStyle className="sidebarIcon" />
+                                <MdTimer className="sidebarIcon" />
                                 Time Table
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Support">
-                                <LineStyle className="sidebarIcon" />
+                                <MdSupport className="sidebarIcon" />
                                 Support
                             </Link>
                         </li>

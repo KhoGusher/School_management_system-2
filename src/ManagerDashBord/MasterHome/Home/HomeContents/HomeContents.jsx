@@ -1,15 +1,8 @@
 import React from 'react'
 import "./HomeContents.css"
-import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
-import Pic from "./mab.jpg"
-import Teacher from "./teacher.png"
-import Student from "./student.png"
-import Subjects from "./subjects.png"
-import Classe from "./classes.jpg"
-import Ranking from "./ranking.jpg"
-import School from "./school.png"
+import { FaChalkboardTeacher, FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
+import { MdSubject, MdClass, MdPeople } from 'react-icons/md'
 import { Link } from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function HomeContents() {
     return (
@@ -18,7 +11,8 @@ export default function HomeContents() {
                 <Link to="/Teachers" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
                         {/* className="card-img-top" */}
-                        <img src={Teacher} alt="" />
+                        {/* <img src={Teacher} alt="" /> */}
+                        <FaChalkboardTeacher size="8em" />
                         <span className="homeContentitermTitle">Teachers</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Males:12</span>
@@ -28,7 +22,8 @@ export default function HomeContents() {
                 </Link>
                 <Link to="/Students" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Student} alt="" />
+                        {/* <img src={Student} alt="" /> */}
+                        <MdPeople size="8em" />
                         <span className="homeContentitermTitle">Students</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Males:22</span>
@@ -38,7 +33,8 @@ export default function HomeContents() {
                 </Link>
                 <Link to="/Candidates" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Student} alt="" />
+                        {/* <img src={Student} alt="" /> */}
+                        <FaUserGraduate size="8em" />
                         <span className="homeContentitermTitle">Candidates</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Males:1</span>
@@ -60,7 +56,8 @@ export default function HomeContents() {
             <div className="HomeContents" style={{ textDecoration: 'none' }}>
                 <Link to="/Subjects">
                     <div className="homeContentIterm">
-                        <img src={Subjects} alt="" />
+                        {/* <img src={Subjects} alt="" /> */}
+                        <MdSubject size="8em" />
                         <span className="homeContentitermTitle">Subjects</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Total:10</span>
@@ -70,17 +67,19 @@ export default function HomeContents() {
                 </Link>
                 <Link to="/Classes" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={School} alt="" />
+                        {/* <img src={School} alt="" /> */}
+                        <MdClass size="8em" />
                         <span className="homeContentitermTitle">Classes</span>
                         <div className="homeContenterContents">
-                            <span className="homeContenterContentsSub">Total:</span>
+                            <span className="homeContenterContentsSub">Total:10</span>
                         </div>
 
                     </div>
                 </Link>
                 <Link to="/Ranks" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <img src={Ranking} alt="" />
+                        {/* <img src={Ranking} alt="" /> */}
+                        <FaCodeBranch size="8em" />
                         <span className="homeContentitermTitle">Ranks</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">Total:13</span>
