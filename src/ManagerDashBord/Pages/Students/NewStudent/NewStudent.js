@@ -3,6 +3,7 @@ import "./NewStudent.css"
 
 export default function NewStudent() {
     return (
+        //chage all the naming conversions to the specifield names
         <div className="newUser">
             <h1 className="newUserTitle">New Student</h1>
             <form className="newUserForm">
