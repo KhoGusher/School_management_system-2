@@ -28,6 +28,12 @@ import GuardianDetails from "./ManagerDashBord/Pages/Guardians/GuardianDetails/G
 import NewGuardian from "./ManagerDashBord/Pages/Guardians/New Guardian/NewGuardian"
 import CandidateDetails from "./ManagerDashBord/Pages/Candidates/Candidate Details/CandidateDetails";
 import RankDetails from "./ManagerDashBord/Pages/Ranks/RankDetails/RankDetails";
+import TeacherSideBar from "./TeacherDashboard/TeacherHome/Teacher SideBar/TeacherSideBar";
+
+//these rAE THE TEACHER LINKS
+import TeachersHome from "./TeacherDashboard/TeacherHome/TeacherHomeContents/Home"
+import TeacherSubjects from "./TeacherDashboard/Pages/TeacherSubjects/TeacherSubjects"
+import TeacherClasses from "./TeacherDashboard/Pages/TeacherClasses/TeacherClasses"
 
 
 
@@ -50,7 +56,8 @@ class App extends Component {
         {/* <NavBar /> */}
         <TopBar />
         <div className="containers">
-          <SideBar />
+          {/* <SideBar /> */}
+          <TeacherSideBar />
 
 
           {/* <Teachers /> */}
@@ -105,6 +112,16 @@ class App extends Component {
 
             {/* admin rank view */}
             <Route path='/Rank/:candidateid' element={<RankDetails />} />
+
+
+
+
+            {/* these are the routes to the teachers dashboard */}
+
+            {/* admin candidate view */}
+            <Route path='/TeachersHome' element={<TeachersHome />} />
+            <Route path='/TeacherSubjects' element={<TeacherSubjects />} />
+            <Route path='/TeacherClasses' element={<TeacherClasses />} />
 
 
           </Routes>
