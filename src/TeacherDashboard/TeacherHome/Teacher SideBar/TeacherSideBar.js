@@ -45,13 +45,13 @@ function TeacherSideBar() {
                         </li>
 
                         <li className="sidebarListItem">
-                            <Link to="/Students">
+                            <Link to="/TeacherStudents">
                                 <MdPeople className="sidebarIcon" />
                                 Students
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Guardians">
+                            <Link to="/TeacherGuardians">
                                 <MdPeople className="sidebarIcon" />
                                 Guardians
                             </Link>

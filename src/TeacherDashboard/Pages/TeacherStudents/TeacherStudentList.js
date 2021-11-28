@@ -40,9 +40,9 @@ function StudentList() {
                             <Details className="teacherDetail" />
                         </Link>
                         <Link to={"/Student/" + params.row.id}>
-                            <Edit className="teacherEdit" />
+                            <Details className="teacherEdit" />
                         </Link>
-                        <DeleteOutline className="teacherDelete" onClick={() => handleTecherDelete(params.row.id)} />
+
                     </>
 
                 )
@@ -54,11 +54,6 @@ function StudentList() {
         <div className="teacherList">
             <div className="topTeachers">
                 <div className="teachersTitle"><h3>Students</h3></div>
-                <Link to="/NewStudent">
-                    <button className="newTeacher">New Student</button>
-
-                </Link>
-
                 <button className="newTeacher">Print Preview</button>
                 <button className="newTeacher">Import Students</button>
                 <button className="newTeacher">Export Students</button>

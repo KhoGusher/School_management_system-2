@@ -5,7 +5,7 @@ import { DeleteOutline, Edit, Details } from "@material-ui/icons"
 import { Subjectrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import NewSubject from './NewSubject/NewSubject';
+
 
 export default function Subjects() {
     const [teachers, setTeachers] = useState(Subjectrows);
@@ -27,6 +27,9 @@ export default function Subjects() {
                     <>
                         <Link to={"/Subject/" + params.row.id}>
                             <Details className="teacherDetail" />
+                        </Link>
+                        <Link to={"/Subject/" + params.row.id}>
+                            <Details />
                         </Link>
 
 

@@ -34,6 +34,21 @@ import TeacherSideBar from "./TeacherDashboard/TeacherHome/Teacher SideBar/Teach
 import TeachersHome from "./TeacherDashboard/TeacherHome/TeacherHomeContents/Home"
 import TeacherSubjects from "./TeacherDashboard/Pages/TeacherSubjects/TeacherSubjects"
 import TeacherClasses from "./TeacherDashboard/Pages/TeacherClasses/TeacherClasses"
+import TeacherStudents from "./TeacherDashboard/Pages/TeacherStudents/TeacherStudentList"
+import TeacherGuardians from "./TeacherDashboard/Pages/TeacherGuardians/TeacherGuardians"
+
+
+//the guardian vie 
+import GuardianSideBar from "./GuardianDashBord/GuardianHome/Guardian SideBar/GuardianSideBar"
+import GuardianHomeContents from "./GuardianDashBord/GuardianHome/GuardianHomeContents/GuardianHome"
+
+
+
+
+//the student view 
+import StudentSideBar from "./StudentDashBoard/StudentHome/Student SideBar/StudentSideBar"
+import StudentHome from "./StudentDashBoard/StudentHome/StudentHomeContents/Home"
+import StudentSubjects from "./StudentDashBoard/StudentPages/StudentSubjects/StudentSubjects"
 
 
 
@@ -57,7 +72,10 @@ class App extends Component {
         <TopBar />
         <div className="containers">
           {/* <SideBar /> */}
-          <TeacherSideBar />
+          {/* <TeacherSideBar /> */}
+          {/* <GuardianSideBar /> */}
+          <StudentSideBar />
+
 
 
           {/* <Teachers /> */}
@@ -118,11 +136,21 @@ class App extends Component {
 
             {/* these are the routes to the teachers dashboard */}
 
-            {/* admin candidate view */}
+            {/* teacher  view */}
             <Route path='/TeachersHome' element={<TeachersHome />} />
             <Route path='/TeacherSubjects' element={<TeacherSubjects />} />
             <Route path='/TeacherClasses' element={<TeacherClasses />} />
+            <Route path='/TeacherStudents' element={<TeacherStudents />} />
+            <Route path='/TeacherGuardians' element={<TeacherGuardians />} />
 
+
+            {/* here are the routes to the guardian vie  */}
+            <Route path='/GuardianHomeContents' element={<GuardianHomeContents />} />
+
+
+            {/* //here are the views for the student  */}
+            <Route path='/StudentHome' element={< StudentHome />} />
+            <Route path='/StudentSubjects' element={< StudentSubjects />} />
 
           </Routes>
 

@@ -8,9 +8,8 @@ export default function HomeContents() {
     return (
         <div className="home">
             <div className="HomeContents">
-                <Link to="/Students" style={{ textDecoration: 'none' }}>
+                <Link to="/TeacherStudents" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-
                         <MdPeople size="8em" />
                         <span className="homeContentitermTitle">Students</span>
                         <div className="homeContenterContents">
@@ -45,9 +44,8 @@ export default function HomeContents() {
             </div>
             <div className="HomeContents" style={{ textDecoration: 'none' }}>
 
-                <Link to="/Candidates" style={{ textDecoration: 'none' }}>
+                <Link to="/TeacherGuardians" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-
                         <MdPeople size="8em" />
                         <span className="homeContentitermTitle">Guardians</span>
                         <div className="homeContenterContents">

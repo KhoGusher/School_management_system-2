@@ -5,7 +5,6 @@ import { DeleteOutline, Edit, Details } from "@material-ui/icons"
 import { Teacherrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import NewClass from './NewClass/NewClass';
 import { Classrows } from "../../../dummyData"
 
 export default function Classes() {
