@@ -4,6 +4,7 @@ import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
 import { Studentrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
+import { VscGraphLine } from "react-icons/vsc";
 import { useState } from "react"
 
 
@@ -40,7 +41,7 @@ function StudentList() {
                             <Details className="teacherDetail" />
                         </Link>
                         <Link to={"/Student/" + params.row.id}>
-                            <Details className="teacherEdit" />
+                            <VscGraphLine className="teacherEdit" />
                         </Link>
 
                     </>

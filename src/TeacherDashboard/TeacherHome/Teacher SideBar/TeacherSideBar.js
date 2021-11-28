@@ -6,8 +6,6 @@ import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
 
 
-
-
 function TeacherSideBar() {
     return (
         <div className="sidebar">

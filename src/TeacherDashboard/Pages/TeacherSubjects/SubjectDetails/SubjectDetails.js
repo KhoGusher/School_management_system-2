@@ -19,21 +19,6 @@ export default function SubjectDetails() {
                 <h3 className="subjectTitle">Subject Details For : Chichewa -chich111</h3>
             </div>
 
-            <div className="newUser">
-                <h2 className="newUserTitle">Editing Subject</h2>
-                <form className="newUserForm">
-                    <div className="newUserItem">
-                        <label>Subject Name</label>
-                        <input className="subjectDetailsFeild" type="text" placeholder="chichewa" />
-                    </div>
-                    <div className="newUserItem">
-                        <label>Subject Code</label>
-                        <input className="subjectDetailsFeild" type="text" placeholder="chich111" />
-                    </div>
-                    <button className="newUserButton">Update</button>
-                </form>
-            </div>
-
             <div className="subjectContaine">
                 <div className="subjectShow">
                     <div className="userUpdate">

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./HomeContents.css"
-import { FaChalkboardTeacher, FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
+import { FaChalkboardTeacher, FaCodeBranch, FaUserGraduate,FaCalendarDay } from 'react-icons/fa'
 import { MdSubject, MdSupport, MdPeople } from 'react-icons/md'
 import { Link } from "react-router-dom"
 
@@ -20,7 +20,7 @@ export default function HomeContents() {
                 </Link>
                 <Link to="/TeacherGuardians" style={{ textDecoration: 'none' }}>
                     <div className="homeContentIterm">
-                        <MdPeople size="8em" />
+                        <FaCalendarDay size="8em" />
                         <span className="homeContentitermTitle">Calendar</span>
                         <div className="homeContenterContents">
                             <span className="homeContenterContentsSub">School Calender</span>

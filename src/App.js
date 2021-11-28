@@ -41,6 +41,8 @@ import TeacherGuardians from "./TeacherDashboard/Pages/TeacherGuardians/TeacherG
 //the guardian vie 
 import GuardianSideBar from "./GuardianDashBord/GuardianHome/Guardian SideBar/GuardianSideBar"
 import GuardianHomeContents from "./GuardianDashBord/GuardianHome/GuardianHomeContents/GuardianHome"
+import TeacherSubjectDetails from "./TeacherDashboard/Pages/TeacherSubjects/SubjectDetails/SubjectDetails"
+import TeacherAssignments from "./TeacherDashboard/Pages/TeacherSubjects/TeacherAssignments/TeacherAssignments";
 
 
 
@@ -49,6 +51,11 @@ import GuardianHomeContents from "./GuardianDashBord/GuardianHome/GuardianHomeCo
 import StudentSideBar from "./StudentDashBoard/StudentHome/Student SideBar/StudentSideBar"
 import StudentHome from "./StudentDashBoard/StudentHome/StudentHomeContents/Home"
 import StudentSubjects from "./StudentDashBoard/StudentPages/StudentSubjects/StudentSubjects"
+import StudendsGrades from "./TeacherDashboard/Pages/TeacherSubjects/StudentsGrades/StudentsGrades"
+
+
+//importing the landing page 
+import LandingPage from "./LandingPage/LandingSkylabs"
 
 
 
@@ -56,43 +63,19 @@ class App extends Component {
   render() {
 
     return (
-      // <div>
-      //     <TopBar />
-      //     <div className="containers">
-      //         <SideBar />
-      //         <Home />
-
-      //     </div>
-      // </div>
-
 
       <BrowserRouter>
+        {/* <LandingPage /> */}
 
-        {/* <NavBar /> */}
         <TopBar />
         <div className="containers">
           {/* <SideBar /> */}
-          {/* <TeacherSideBar /> */}
+          <TeacherSideBar />
           {/* <GuardianSideBar /> */}
-          <StudentSideBar />
+          {/* <StudentSideBar /> */}
 
-
-
-          {/* <Teachers /> */}
-          {/* <Home /> */}
-
-
-          {/* <NavBar />
-              <Client /> */}
 
           <Routes>
-            {/* //<Home /> */}
-
-            {/* <Route exact path='/' element={<Login />} />
-            {/* <Route path='/dashboard' element={<DashBoard />} /> */}
-            {/* <Route path='/customers' element={<CustomersList />} />
-            <Route path='/cart' element={<ShoppingCart />} />
-            <Route path='/SignUp' element={<SignUp />} />*/}
             {/* admin dashbord routes */}
             <Route path='/Home' element={<Home />} />
             <Route path='/Teachers' element={<Teachers />} />
@@ -142,6 +125,12 @@ class App extends Component {
             <Route path='/TeacherClasses' element={<TeacherClasses />} />
             <Route path='/TeacherStudents' element={<TeacherStudents />} />
             <Route path='/TeacherGuardians' element={<TeacherGuardians />} />
+            <Route path='/TeacherSubjectDetails/:subjectid' element={<TeacherSubjectDetails />} />
+            <Route path='/TeacherAssignments' element={<TeacherAssignments />} />
+            <Route path='/StudendsGrades' element={<StudendsGrades />} />
+            
+
+
 
 
             {/* here are the routes to the guardian vie  */}

@@ -1,12 +1,17 @@
 import React from 'react'
 import "./SideBar.css"
 import { FaAlignJustify, FaCalendarDay, FaHome, FaChalkboardTeacher, FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
-import { MdSubject, MdClass, MdPeople, MdTimer, MdSupport } from 'react-icons/md'
+import { MdSubject, MdClass, MdPeople, MdTimer, MdPayments, MdSupport, MdGrading } from 'react-icons/md'
 import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
+import { GrDocumentPerformance } from "react-icons/gr";
+import { VscGraphLine } from "react-icons/vsc";
 
 
 
+
+//MdEdit
+//MdDelete
 
 function TeacherSideBar() {
     return (
@@ -40,19 +45,19 @@ function TeacherSideBar() {
 
                         <li className="sidebarListItem">
                             <Link to="/StudentAssessments">
-                                <MdPeople className="sidebarIcon" />
+                                <MdGrading className="sidebarIcon" />
                                 Assessments
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/StudentExamResults">
-                                <MdPeople className="sidebarIcon" />
+                                <VscGraphLine color="blue" className="sidebarIcon" />
                                 Exam Results
                             </Link>
                         </li>
                         <li className="sidebarListItem">
                             <Link to="/Calender">
-                                <FaCalendarDay className="sidebarIcon" />
+                                <MdPayments className="sidebarIcon" />
                                 Payments
                             </Link>
                         </li>

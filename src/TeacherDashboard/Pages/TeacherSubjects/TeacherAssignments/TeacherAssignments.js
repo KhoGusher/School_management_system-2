@@ -1,14 +1,15 @@
 import React from 'react'
-import "./Subjects.css"
+import "./TeacherAssignments.css"
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
-import { Subjectrows } from "../../../dummyData"
+import { Subjectrows } from "../../../../dummyData"
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import { MdGrading } from 'react-icons/md'
+import AddAssidnment from "../NewAssignment/NewAssignment"
 
 
-export default function Subjects() {
+export default function TeacherAssignments() {
     const [teachers, setTeachers] = useState(Subjectrows);
     //delete subject function
     const handleTecherDelete = (id) => {
@@ -18,21 +19,18 @@ export default function Subjects() {
     //    defining colums for the subjects
     const columns = [
 
-        { field: 'subjectName', headerName: 'Subject Name', width: 200 },
-        { field: 'SubjectCode', headerName: 'Subject Code', width: 200 },
-        { field: 'TotalSubjectTeachers', headerName: 'Total Teachers', width: 200 },
+        { field: 'subjectName', headerName: 'Assignment Name', width: 200 },
+        { field: 'SubjectCode', headerName: 'Assignment Description', width: 230 },
+        { field: 'TotalSubjectTeachers', headerName: 'Total Marks', width: 200 },
         { field: 'TotalStudents', headerName: 'Total Students', width: 200 },
         {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/TeacherSubjectDetails/" + params.row.id}>
+                        <Link to={"/StudendsGrades"}>
                             <Details className="teacherDetail" />
                         </Link>
-                        <Link to={"/TeacherAssignments"}>
-                            <MdGrading />
-                        </Link>
-
+                        <Edit className="teacherDetail" />
 
                     </>
 
@@ -43,16 +41,16 @@ export default function Subjects() {
     ];
     return (
         <>
-
             <div className="teacherList">
+                <AddAssidnment />
                 <div className="topTeachers">
-                    <div className="teachersTitle"><h3>Subjects Listing</h3></div>
-                    <button className="newSubject">Export Subjects</button>
-                    <button className="newSubject">Import Subjects</button>
+                    <div className="teachersTitle"><h3>Assignments  Listing For Chich111</h3></div>
+                    <button className="newSubject">Export </button>
+                    <button className="newSubject">Import</button>
                     <button className="newSubject">Print Preview</button>
                     <div className="btn-search">
 
-                        <input className="search-teacher form-control" value="Search Subject" />
+                        <input className="search-teacher form-control" value="Search Assignments" />
                     </div>
 
                 </div>
