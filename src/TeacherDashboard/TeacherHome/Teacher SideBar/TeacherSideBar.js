@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SideBar.css"
 import { FaAlignJustify, FaCalendarDay, FaHome, FaChalkboardTeacher, FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
-import { MdSubject, MdClass, MdPeople, MdTimer, MdSupport } from 'react-icons/md'
+import { MdSubject, MdClass, MdPeople, MdTimer, MdSupport,MdNotificationsActive } from 'react-icons/md'
 import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
 
@@ -55,12 +55,12 @@ function TeacherSideBar() {
                             </Link>
                         </li>
 
-                        {/* <li className="sidebarListItem">
-                            <Link to="/Candidates">
-                                <FaUserGraduate className="sidebarIcon" />
-                                Candidates
+                        <li className="sidebarListItem">
+                            <Link to="/Notifications">
+                                <MdNotificationsActive className="sidebarIcon" />
+                                Notifications
                             </Link>
-                        </li> */}
+                        </li>
                         <li className="sidebarListItem">
                             <Link to="/Calender">
                                 <FaCalendarDay className="sidebarIcon" />

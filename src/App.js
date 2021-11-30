@@ -36,6 +36,7 @@ import TeacherSubjects from "./TeacherDashboard/Pages/TeacherSubjects/TeacherSub
 import TeacherClasses from "./TeacherDashboard/Pages/TeacherClasses/TeacherClasses"
 import TeacherStudents from "./TeacherDashboard/Pages/TeacherStudents/TeacherStudentList"
 import TeacherGuardians from "./TeacherDashboard/Pages/TeacherGuardians/TeacherGuardians"
+import StudentPerfomance from "./StudentPerfomance"
 
 
 //the guardian vie 
@@ -128,7 +129,8 @@ class App extends Component {
             <Route path='/TeacherSubjectDetails/:subjectid' element={<TeacherSubjectDetails />} />
             <Route path='/TeacherAssignments' element={<TeacherAssignments />} />
             <Route path='/StudendsGrades' element={<StudendsGrades />} />
-            
+            <Route path='/StudentPerfomance/:subjectid' element={<StudentPerfomance />} />
+
 
 
 

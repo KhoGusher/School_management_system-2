@@ -2,14 +2,14 @@ import React from 'react'
 import "./StudentsList.css"
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
-import { Studentrows } from "../../../../dummyData"
+import { StudentGradesrows } from "../../../../dummyData"
 import { Link } from "react-router-dom"
 import { VscGraphLine } from "react-icons/vsc";
 import { useState } from "react"
 
 
 function StudentList() {
-    const [teachers, setTeachers] = useState(Studentrows);
+    const [teachers, setTeachers] = useState(StudentGradesrows);
     //delete student function
     const handleTecherDelete = (id) => {
         setTeachers(teachers.filter((item) => item.id !== id));
@@ -27,13 +27,11 @@ function StudentList() {
             }
         },
         { field: 'lastName', headerName: 'Last name', width: 160 },
-        { field: 'dob', headerName: 'Middle Name', width: 115 },
+        { field: 'dob', headerName: 'Middle Name', width: 170 },
         { field: 'gender', headerName: 'Gender', width: 125 },
         { field: 'district', headerName: 'Registarion Number', width: 220 },
         { field: 'residentialAddress', headerName: 'Grade', width: 130 },
-        
-        {
-            field: 'action', headerName: 'Position', width: 150 }
+        {field: 'position', headerName: 'Position', width: 150}
     ];
     return (
         <div className="teacherList">

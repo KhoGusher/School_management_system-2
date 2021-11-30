@@ -117,6 +117,21 @@ export const Subjectrows = [
     TotalStudents: "13",
   },
 ]
+export const StudentGradesrows = [
+  {
+    id: 1,
+    firstName: "stephano",
+    lastName: "patrick",
+    dob: "junior",
+    gender: "Male",
+    district: "Bsc/com/ne/10/18",
+    residentialAddress: "60",
+    position:"1",
+    avatar: "https://images.pexels.c",
+  
+
+  },
+]
 export const Studentrows = [
   {
     id: 1,

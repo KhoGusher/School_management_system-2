@@ -40,7 +40,7 @@ function StudentList() {
                         <Link to={"/Student/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
-                        <Link to={"/Student/" + params.row.id}>
+                        <Link to={"/StudentPerfomance/" + params.row.id}>
                             <VscGraphLine className="teacherEdit" />
                         </Link>
 
