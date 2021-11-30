@@ -11,13 +11,12 @@ import {
 } from "@material-ui/icons";
 import { Link } from '@material-ui/core';
 
-export default function StudentDetails() {
+export default function TeacherGuardians() {
     return (
 
         <div className="teacher">
             <div className="teacherTitleContainer">
                 <h3 className="teacherTitle">Guardian Details</h3>
-
 
             </div>
             <div className="teacherContaine">
@@ -85,141 +84,7 @@ export default function StudentDetails() {
                     </div>
                 </div>
 
-                <div className="teacherUpdate">
-                    <div className="userUpdate">
-                        <span className="userUpdateTitle">Edit</span>
-                        <form className="userUpdateForm">
-                            <div className="userUpdateLeft">
-                                <div className="userUpdateItem">
-                                    <label>FistName</label>
-                                    <input
-                                        type="text"
-                                        placeholder="stephano"
-                                        className="userUpdateInput"
-                                    />
 
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Middle Name</label>
-                                    <input
-                                        type="text"
-                                        placeholder="junior"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Last Name</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Patrick"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>D.O.B</label>
-                                    <input
-                                        type="text"
-                                        placeholder="10.12.1999"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Gender</label>
-                                    <input
-                                        type="radio"
-                                        name="gender" id="male" value="male"
-                                    />
-                                    <label for="male">Male</label>
-                                    <input
-                                        type="radio"
-                                        name="gender" id="female" value="female"
-                                    />
-                                    <label for="female">Female</label>
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>District</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Zomba"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Village</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Khuvinda"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Residential Address</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Chikanda"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Nationality</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Malawi"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Email</label>
-                                    <input
-                                        type="text"
-                                        placeholder="patrickmabziness@gmail.com"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label>Phone</label>
-                                    <input
-                                        type="text"
-                                        placeholder="56 67"
-                                        className="userUpdateInput"
-                                    />
-                                </div>
-                                <div className="userUpdateItem">
-                                    <label className="studentlabel">Students:</label>
-
-                                    <select className="newUserSelect" name="active" id="active">
-                                        <option value="chich1">ma</option>
-                                        <option value="chich2">na</option>
-                                        <option value="chich2">ch</option>
-                                        <option value="chich2">na</option>
-                                        <option value="chich2">mun</option>
-                                        <option value="chich2">mm</option>
-
-                                    </select>
-                                    <input value="Search Student" type="text"></input>
-                                </div>
-
-                            </div>
-                            <div className="userUpdateRight">
-                                <div className="userUpdateUpload">
-                                    <img
-                                        className="userUpdateImg"
-                                        src={profile}
-                                        alt=""
-                                    />
-                                    <label htmlFor="file">
-                                        <Publish className="userUpdateIcon" />
-                                    </label>
-                                    <span>Picture </span>
-                                    <input type="file" id="file" style={{ display: "none" }} />
-                                </div>
-
-                                <button className="userUpdateButton">Update</button>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
 
         </div>

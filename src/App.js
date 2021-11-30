@@ -37,7 +37,9 @@ import TeacherClasses from "./TeacherDashboard/Pages/TeacherClasses/TeacherClass
 import TeacherStudents from "./TeacherDashboard/Pages/TeacherStudents/TeacherStudentList"
 import TeacherGuardians from "./TeacherDashboard/Pages/TeacherGuardians/TeacherGuardians"
 import StudentPerfomance from "./StudentPerfomance"
-
+import TeacherClasesDetails from "./TeacherDashboard/Pages/TeacherClasses/ClassDetails/ClassDetails"
+import TeacherStudentDeatils from "./TeacherDashboard/Pages/TeacherStudents/StudentDeatils/StudentDetails"
+import TeacherGuardianDetails from "./TeacherDashboard/Pages/TeacherGuardians/GuardianDetails/GuardianDetails"
 
 //the guardian vie 
 import GuardianSideBar from "./GuardianDashBord/GuardianHome/Guardian SideBar/GuardianSideBar"
@@ -129,7 +131,10 @@ class App extends Component {
             <Route path='/TeacherSubjectDetails/:subjectid' element={<TeacherSubjectDetails />} />
             <Route path='/TeacherAssignments' element={<TeacherAssignments />} />
             <Route path='/StudendsGrades' element={<StudendsGrades />} />
-            <Route path='/StudentPerfomance/:subjectid' element={<StudentPerfomance />} />
+            <Route path='/StudentPerfomance/:studentid' element={<StudentPerfomance />} />
+            <Route path='/TeacherClasesDetails/:classid' element={<TeacherClasesDetails />} />
+            <Route path='/TeacherStudentDeatils/:studentid' element={<TeacherStudentDeatils />} />
+            <Route path='/TeacherGuardianDetails/:guardianid' element={<TeacherGuardianDetails />} />
 
 
 

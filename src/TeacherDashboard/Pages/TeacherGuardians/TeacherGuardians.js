@@ -39,12 +39,10 @@ export default function Guardians() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/Guardian/" + params.row.id}>
+                        <Link to={"/TeacherGuardianDetails/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
-                        <Link to={"/Guardian/" + params.row.id}>
-                            <Details className="teacherEdit" />
-                        </Link>
+
 
                     </>
 

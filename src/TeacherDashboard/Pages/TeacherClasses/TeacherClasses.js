@@ -25,7 +25,7 @@ export default function Classes() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/Class/" + params.row.id}>
+                        <Link to={"/TeacherClasesDetails/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
 

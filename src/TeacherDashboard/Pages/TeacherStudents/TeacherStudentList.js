@@ -37,7 +37,7 @@ function StudentList() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/Student/" + params.row.id}>
+                        <Link to={"/TeacherStudentDeatils/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
                         <Link to={"/StudentPerfomance/" + params.row.id}>
