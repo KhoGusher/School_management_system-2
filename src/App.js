@@ -55,6 +55,7 @@ import StudentSideBar from "./StudentDashBoard/StudentHome/Student SideBar/Stude
 import StudentHome from "./StudentDashBoard/StudentHome/StudentHomeContents/Home"
 import StudentSubjects from "./StudentDashBoard/StudentPages/StudentSubjects/StudentSubjects"
 import StudendsGrades from "./TeacherDashboard/Pages/TeacherSubjects/StudentsGrades/StudentsGrades"
+import StudentSubjectDetails from "./StudentDashBoard/StudentPages/StudentSubjects/SubjectDetails/SubjectDetails"
 
 
 //importing the landing page 
@@ -73,9 +74,9 @@ class App extends Component {
         <TopBar />
         <div className="containers">
           {/* <SideBar /> */}
-          <TeacherSideBar />
+          {/* <TeacherSideBar /> */}
           {/* <GuardianSideBar /> */}
-          {/* <StudentSideBar /> */}
+          <StudentSideBar />
 
 
           <Routes>
@@ -147,6 +148,8 @@ class App extends Component {
             {/* //here are the views for the student  */}
             <Route path='/StudentHome' element={< StudentHome />} />
             <Route path='/StudentSubjects' element={< StudentSubjects />} />
+            <Route path='/StudentSubjectDetails/:guardianid' element={<StudentSubjectDetails />} />
+
 
           </Routes>
 

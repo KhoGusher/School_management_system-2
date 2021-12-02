@@ -25,7 +25,7 @@ export default function Subjects() {
             field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
                 return (
                     <>
-                        <Link to={"/Subject/" + params.row.id}>
+                        <Link to={"/StudentSubjectDetails/" + params.row.id}>
                             <Details className="teacherDetail" />
                         </Link>
 

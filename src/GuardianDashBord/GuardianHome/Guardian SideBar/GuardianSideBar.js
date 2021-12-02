@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SideBar.css"
 import { FaAlignJustify, FaCalendarDay, FaHome, FaChalkboardTeacher, FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
-import { MdSubject, MdClass, MdPeople, MdTimer, MdSupport } from 'react-icons/md'
+import { MdSubject, MdClass, MdPeople, MdTimer, MdSupport, MdNotificationsActive, MdPayments } from 'react-icons/md'
 import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
 
@@ -36,6 +36,18 @@ function GuardianSideBar() {
                             <Link to="/TeacherStudents">
                                 <MdPeople className="sidebarIcon" />
                                 Students
+                            </Link>
+                        </li>
+                        <li className="sidebarListItem">
+                            <Link to="/Notifications">
+                                <MdNotificationsActive className="sidebarIcon" />
+                                Notifications
+                            </Link>
+                        </li>
+                        <li className="sidebarListItem">
+                            <Link to="/Calender">
+                                <MdPayments className="sidebarIcon" />
+                                Payments
                             </Link>
                         </li>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./SideBar.css"
 import { FaAlignJustify, FaCalendarDay, FaHome, FaChalkboardTeacher, FaCodeBranch, FaUserGraduate } from 'react-icons/fa'
-import { MdSubject, MdClass, MdPeople, MdTimer, MdPayments, MdSupport, MdGrading } from 'react-icons/md'
+import { MdSubject, MdClass, MdPeople, MdNotificationsActive, MdTimer, MdPayments, MdSupport, MdGrading } from 'react-icons/md'
 import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
 import { GrDocumentPerformance } from "react-icons/gr";
@@ -53,6 +53,12 @@ function TeacherSideBar() {
                             <Link to="/StudentExamResults">
                                 <VscGraphLine color="blue" className="sidebarIcon" />
                                 Exam Results
+                            </Link>
+                        </li>
+                        <li className="sidebarListItem">
+                            <Link to="/Notifications">
+                                <MdNotificationsActive className="sidebarIcon" />
+                                Notifications
                             </Link>
                         </li>
                         <li className="sidebarListItem">
