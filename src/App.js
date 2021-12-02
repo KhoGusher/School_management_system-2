@@ -56,7 +56,7 @@ import StudentHome from "./StudentDashBoard/StudentHome/StudentHomeContents/Home
 import StudentSubjects from "./StudentDashBoard/StudentPages/StudentSubjects/StudentSubjects"
 import StudendsGrades from "./TeacherDashboard/Pages/TeacherSubjects/StudentsGrades/StudentsGrades"
 import StudentSubjectDetails from "./StudentDashBoard/StudentPages/StudentSubjects/SubjectDetails/SubjectDetails"
-
+import StudentResults from "./StudentDashBoard/StudentPages/StudentResults/StudentResults"
 
 //importing the landing page 
 import LandingPage from "./LandingPage/LandingSkylabs"
@@ -149,7 +149,7 @@ class App extends Component {
             <Route path='/StudentHome' element={< StudentHome />} />
             <Route path='/StudentSubjects' element={< StudentSubjects />} />
             <Route path='/StudentSubjectDetails/:guardianid' element={<StudentSubjectDetails />} />
-
+            <Route path='/StudentResults/:studentid' element={<StudentResults />} />
 
           </Routes>
 

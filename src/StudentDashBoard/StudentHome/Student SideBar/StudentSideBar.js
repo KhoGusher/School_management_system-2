@@ -44,13 +44,13 @@ function TeacherSideBar() {
                         </li>
 
                         <li className="sidebarListItem">
-                            <Link to="/StudentAssessments">
+                            <Link to="/StudentPerfomance/ + params.row.id">
                                 <MdGrading className="sidebarIcon" />
                                 Assessments
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/StudentExamResults">
+                            <Link to="/StudentResults/ + params.row.id">
                                 <VscGraphLine color="blue" className="sidebarIcon" />
                                 Exam Results
                             </Link>
