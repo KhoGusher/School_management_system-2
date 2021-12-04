@@ -20,7 +20,10 @@
   }
   
   .header {
+    top: 0 !important;
+    z-index: 999 !important;
     display: flex;
+    position: sticky !important;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -76,25 +79,25 @@
   } */
   
   @media (min-width: 768px) {
-    .showcase {
+    .skylabs {
       background-position: top;
     }
   
-    .showcase .showcase-overlay h1 {
+    .skylabs .skylabs-overlay h1 {
       font-size: 64px;
     }
   
-    .showcase .showcase-overlay p {
+    .skylabs .skylabs-overlay p {
       font-size: 18px;
     }
   
-    .destinations .grid {
+    .contents .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
   
-    .destinations .grid div img {
+    .contents .grid div img {
       height: 150px;
       width: 300px;
     }

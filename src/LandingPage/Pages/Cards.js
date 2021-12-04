@@ -4,15 +4,15 @@ import image2 from './assets/image-2.jpg'
 import image3 from './assets/image-3.jpg'
 import image1 from "./assets/image-1.jpg"
 
-const Destinations = () => {
+const Contents = () => {
   return (
-    <section className='destinations'>
+    <section className='contents'>
       <h3>Manage Your Schools Anywhere In The world !</h3>
       <p className="paragraph">SkyLabs360 is the school managegent system that helps you to manage your shools in a very fashion way anywhere in the way world</p>
       <p className="paragraph">The system has digitilized the paper work of all the operations you do at your school to ease the preasure ,time and all the cost spent while working with huge files </p>
       <div className='grid'>
         <div>
-          <img src={image1} alt='destination-1' />
+          <img src={image1} alt='Content-1' />
           <h3>The Digital World</h3>
           <p>
             Create your account now and keep your school information secure
@@ -21,7 +21,7 @@ const Destinations = () => {
         </div>
 
         <div>
-          <img src={image2} alt='destination-2' />
+          <img src={image2} alt='Content-2' />
           <h3>Huge Data Easly Managed</h3>
           <p>
             The paper work made digital!
@@ -30,7 +30,7 @@ const Destinations = () => {
         </div>
 
         <div>
-          <img src={image3} alt='destination-3' />
+          <img src={image3} alt='Content-3' />
           <h3>Communicate Easly</h3>
           <p>
             Sending the notifications or any massage to administartors,students,teachers and parents  at your school level
@@ -39,7 +39,7 @@ const Destinations = () => {
       </div>
       <div className='grid'>
         <div>
-          <img src={image1} alt='destination-1' />
+          <img src={image1} alt='Content-1' />
           <h3>The Digital World</h3>
           <p>
             Create your account now and keep your school information secure
@@ -48,7 +48,7 @@ const Destinations = () => {
         </div>
 
         <div>
-          <img src={image2} alt='destination-2' />
+          <img src={image2} alt='Content-2' />
           <h3>Huge Data Easly Managed</h3>
           <p>
             The paper work made digital!
@@ -57,7 +57,7 @@ const Destinations = () => {
         </div>
 
         <div>
-          <img src={image3} alt='destination-3' />
+          <img src={image3} alt='Content-3' />
           <h3>Communicate Easly</h3>
           <p>
             Sending the notifications or any massage to administartors,students,teachers and parents  at your school level
@@ -68,4 +68,4 @@ const Destinations = () => {
   )
 }
 
-export default Destinations
+export default Contents

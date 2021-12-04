@@ -5,26 +5,26 @@
     color: #333;
     padding-bottom: 20px;
 }
-.destinations {
+.contents {
     padding: 50px;
     text-align: center;
   }
   .paragraph{
     font-size: 20px;
   }
-  .destinations h3 {
+  .contents h3 {
     font-size: 30px;
     padding: 10px;
     text-align: center;
   }
   
-  .destinations .grid div {
+  .contents .grid div {
     background-color: #f1f1f1;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 10px;
   }
   
-  .destinations .grid div img {
+  .contents .grid div img {
     border-radius: 10px;
   }

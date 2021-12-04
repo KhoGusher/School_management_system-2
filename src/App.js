@@ -63,6 +63,7 @@ import LandingNavBar from "./LandingPage/Landing NavBar/NavBar"
 import Skylabs from "./LandingPage/Pages/Skylabs"
 import Cards from "./LandingPage/Pages/Cards"
 import Footer from "./LandingPage/Pages/Footer"
+import Video from "./LandingPage/Pages/Video";
 
 
 
@@ -76,6 +77,7 @@ class App extends Component {
         <LandingNavBar />
         <Skylabs />
         <Cards />
+        <Video />
         <Footer />
 
         {/* <TopBar /> */}
