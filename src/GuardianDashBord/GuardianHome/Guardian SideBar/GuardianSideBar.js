@@ -35,9 +35,22 @@ function GuardianSideBar() {
                         <li className="sidebarListItem">
                             <Link to="/TeacherStudents">
                                 <MdPeople className="sidebarIcon" />
-                                Students
+                                My Students
                             </Link>
                         </li>
+                        <li className="sidebarListItem">
+                            <Link to="/TeacherStudents">
+                                <MdPeople className="sidebarIcon" />
+                                Students Assessiments
+                            </Link>
+                        </li>
+                        <li className="sidebarListItem">
+                            <Link to="/TeacherStudents">
+                                <MdPeople className="sidebarIcon" />
+                                Students Results
+                            </Link>
+                        </li>
+
                         <li className="sidebarListItem">
                             <Link to="/Notifications">
                                 <MdNotificationsActive className="sidebarIcon" />

@@ -1,0 +1,30 @@
+
+.grid h3{
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    padding-bottom: 20px;
+}
+.destinations {
+    padding: 50px;
+    text-align: center;
+  }
+  .paragraph{
+    font-size: 20px;
+  }
+  .destinations h3 {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .destinations .grid div {
+    background-color: #f1f1f1;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .destinations .grid div img {
+    border-radius: 10px;
+  }

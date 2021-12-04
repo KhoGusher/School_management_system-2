@@ -59,7 +59,11 @@ import StudentSubjectDetails from "./StudentDashBoard/StudentPages/StudentSubjec
 import StudentResults from "./StudentDashBoard/StudentPages/StudentResults/StudentResults"
 
 //importing the landing page 
-import LandingPage from "./LandingPage/LandingSkylabs"
+import LandingNavBar from "./LandingPage/Landing NavBar/NavBar"
+import Skylabs from "./LandingPage/Pages/Skylabs"
+import Cards from "./LandingPage/Pages/Cards"
+import Footer from "./LandingPage/Pages/Footer"
+
 
 
 
@@ -69,14 +73,17 @@ class App extends Component {
     return (
 
       <BrowserRouter>
-        {/* <LandingPage /> */}
+        <LandingNavBar />
+        <Skylabs />
+        <Cards />
+        <Footer />
 
-        <TopBar />
+        {/* <TopBar /> */}
         <div className="containers">
           {/* <SideBar /> */}
           {/* <TeacherSideBar /> */}
           {/* <GuardianSideBar /> */}
-          <StudentSideBar />
+          {/* <StudentSideBar /> */}
 
 
           <Routes>
