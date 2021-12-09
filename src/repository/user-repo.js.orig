@@ -1,0 +1,443 @@
+  require('dotenv').config({ path: '.sendgrid.env' });
+    const sgMail = require('@sendgrid/mail'); 
+    const pool = require('../pool');
+    const toCamelCase = require('./utills/toCamelCase');
+
+    var bcrypt = require('bcrypt');
+    var crypto = require('crypto');
+
+    class UserRepo {
+<<<<<<< HEAD
+            static async getApparel(){
+                const { rows } = await pool.query(`SELECT * FROM products WHERE category = 'apparel';`);   
+                return toCamelCase(rows); 
+          
+                }
+
+            static async getAllApparel(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category='apparel';`);
+              return toCamelCase(rows); 
+=======
+        static async findApparel(){
+            const { rows } = await pool.query(`SELECT * FROM products WHERE category = 'apparel';`);
+            
+            return toCamelCase(rows); 
+      
+            }
+
+  static async findApparelAll(){
+    const { rows } = await pool.query(`SELECT * FROM products WHERE category='apparel';`);
+  
+    return toCamelCase(rows); 
+>>>>>>> 04a459803f7aa5af902dbf36a361483a168a942c
+
+            }
+
+<<<<<<< HEAD
+            static async getElectronics(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category='electronic';`);
+=======
+            static async findLocomotive(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category='locomotive';`);
+            
+>>>>>>> 04a459803f7aa5af902dbf36a361483a168a942c
+              return toCamelCase(rows); 
+        
+            }
+            
+
+<<<<<<< HEAD
+            static async getAllElectronics(){
+                const { rows } = await pool.query(`SELECT * FROM products WHERE category='electronic';`);
+=======
+            static async findLocomotiveAll(){
+                const { rows } = await pool.query(`SELECT * FROM products WHERE category='locomotive';`);
+>>>>>>> 04a459803f7aa5af902dbf36a361483a168a942c
+            
+              return toCamelCase(rows); 
+        
+            }
+
+<<<<<<< HEAD
+
+            static async getHouses(){  
+                 const  { rows } = await pool.query(`SELECT * FROM products WHERE category = 'house'`);
+              
+                  return toCamelCase(rows);   
+            }
+          
+
+            static async getAllHouses(){
+              const  { rows } = await pool.query(`SELECT * FROM products WHERE category='house';`);
+=======
+            static async findElectronic(){
+              
+const  { rows } = await pool.query(`SELECT * FROM products WHERE category = 'electronic'`);
+                     
+                 return toCamelCase(rows);   
+            }
+          
+
+            static async findElectronicAll(){
+              
+              const  { rows } = await pool.query(`SELECT * FROM products WHERE category='electronic';`);
+>>>>>>> 04a459803f7aa5af902dbf36a361483a168a942c
+                     
+                 return toCamelCase(rows);   
+            }
+
+
+
+<<<<<<< HEAD
+
+
+            static async getLocomotives(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category = 'locomotive';`);   
+              return toCamelCase(rows); 
+        
+              }
+
+          static async getAllLocomotives(){
+            const { rows } = await pool.query(`SELECT * FROM products WHERE category='locomotive';`);
+            return toCamelCase(rows); 
+
+          }
+
+          static async getHomeOffice(){
+            const { rows } = await pool.query(`SELECT * FROM products WHERE category='home_and_office';`);
+            return toCamelCase(rows); 
+      
+          }
+          
+
+          static async getAllHomeOffice(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category='home_and_office';`);
+          
+            return toCamelCase(rows); 
+      
+          }
+
+
+          static async getFoods(){
+            const { rows } = await pool.query(`SELECT * FROM products WHERE category='food';`);
+            return toCamelCase(rows); 
+      
+          }
+          
+
+          static async getAllFoods(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category='food';`);
+          
+            return toCamelCase(rows); 
+      
+          }
+
+=======
+            static async findFood(){
+              const { rows } = await pool.query(`SELECT * FROM products WHERE category='food';`);
+            
+              return toCamelCase(rows); 
+        
+            }
+            
+
+            static async findFoodAll(){
+                const { rows } = await pool.query(`SELECT * FROM products WHERE category='food';`);
+            
+              return toCamelCase(rows); 
+        
+            }
+
+            static async findHouse(){
+              
+const  { rows } = await pool.query(`SELECT * FROM products WHERE category = 'house'`);
+                     
+                 return toCamelCase(rows);   
+            }
+          
+
+            static async findHouseAll(){
+              
+              const  { rows } = await pool.query(`SELECT * FROM products WHERE category='house';`);
+                     
+                 return toCamelCase(rows);   
+            }
+>>>>>>> 04a459803f7aa5af902dbf36a361483a168a942c
+
+
+
+    static async findSupplierWithGoods(suppId){
+      
+                 const { rows } = await pool.query(`SELECT * FROM products WHERE supplier_id = $1;`
+                          , [suppId]);
+             
+               if(rows){        
+                return toCamelCase(rows);
+                  }
+        }    
+
+        static async findIdForDetailed(id){
+      
+          const { rows } = await pool.query(`SELECT * FROM products WHERE id = $1;`
+                                , [id]);
+                   
+                     if(rows){        
+                      return toCamelCase(rows);
+                        }
+              }
+
+
+        static async findById(id){
+            // WARNING HUGE SECURITY POTHOLE
+            // overcame by this, to prevent sql injection
+            const { rows } = await pool.query(`
+              SELECT * FROM menu WHERE id = $1;
+            `, [id]);
+
+            return toCamelCase(rows)[0];
+
+        }
+
+
+        // for sign up
+        static insert = (request, response) => {
+          const user = request.body
+          
+          hashPassword(user.password)
+          .then((hashedPassword) => {
+            delete user.password
+            user.password = hashedPassword
+          })
+          .then(() => createToken())
+          .then(token => user.token = token)
+          .then( ()=> sendGridConfirmEmail(user, response))
+          .then(() => createUser(user))
+          .then(user => {
+            delete user.password
+            const { id } = user;
+            const is_authenticated="false";
+            response.status(201).json({ is_authenticated, id })
+          })
+          .catch((err) => console.error(err))
+      }
+
+      // signup verification
+      static async userVerifyRegister(response, verifyData) {
+        let {id, token, is_authenticated, email} = verifyData;
+          is_authenticated = true;
+          const tok = await createToken();
+          const verifiedData = {id, email, tok, is_authenticated};
+
+          if(is_authenticated){
+            const { rows } = await pool.query(
+              'UPDATE users SET is_authenticated = $1, token = $2 WHERE id = $3 AND email = $4 RETURNING *;',
+              [verifiedData.is_authenticated, verifiedData.tok, verifiedData.id, verifiedData.email]
+          );
+          
+          const verified = {
+            id: rows[0].id,
+            token: rows[0].token,
+            expires_in: rows[0].expires_in
+          }; 
+          response.status(200).json(verified);         
+          }       
+      }
+
+        // signin
+        static signInVerification = (request, response) => {
+          const userReq = request.body;
+          
+          let user;
+
+            findUser(userReq)
+            .then(foundUser=>{
+              user = foundUser;
+              return checkPassword(userReq.password, foundUser, response) 
+            })
+            .then((res) => createToken())
+            .then (token => updateUserToken(token, user))
+            .then(() => {
+              delete user.password
+              const newUser = {
+                id: user.id,
+                token: user.token,
+                expires_in: user.expires_in
+              };
+              response.status(200).json(newUser);
+            })
+            .catch((err) => console.error(err));
+          }
+      
+
+            // password reset first phase
+            static passwordReset = (request, response, dataSuppliedByUser) => {
+                    let user = dataSuppliedByUser;
+                    
+                    sendGridResetPassword(user, response);      
+            }
+
+            // password update in process
+            static passwordUpdateInProcess = (request, response, dataToUpdate, passwd) => {
+                
+              const user = dataToUpdate;
+
+              hashPassword(passwd)
+              .then((hashedPassword) => {
+                delete user.password
+                user.password = hashedPassword
+              })
+              .then(() => createToken())
+              .then(token => user.token = token)
+              .then(() => updateUserPassword(user))
+              .then(user => {
+                delete user.password      
+                response.status(201).json(user)
+              })
+              .catch((err) => console.error(err))
+          
+            }
+
+        static async update(id, username, bio){
+          const { rows } = await pool.query(
+              'UPDATE menu SET username = $1, bio = $2 WHERE id = $3 RETURNING *;',
+              [username, bio, id]
+          );
+          return toCamelCase(rows)[0];
+        }
+
+        static async delete(id){
+            const { rows } = await pool.query('DELETE FROM menu WHERE id=$1 RETURNING *;',
+            [id]
+            );
+            return toCamelCase(rows[0]);
+        }
+
+        static async count() {
+          const { rows } = await pool.query('SELECT COUNT(*) FROM menu;');
+
+          return parseInt(rows[0].count);
+        }
+
+    }
+
+
+    const findUser = (userReq) => {
+      return pool.query("SELECT * FROM users WHERE email = $1", [userReq.email])
+        .then((data) => data.rows[0])
+    }
+
+    // create user
+    const createUser = (user) => {
+      return pool.query(
+        "INSERT INTO users (firstname, lastname, email, password, token, created_at) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id, email, created_at, token, expires_in",
+        [user.firstname, user.lastname, user.email, user.password, user.token, new Date()]
+      )
+      .then((data) => data.rows[0])
+    }
+
+    const createToken = () => {
+      return new Promise((resolve, reject) => {
+        crypto.randomBytes(16, (err, data) => {
+          err ? reject(err) : resolve(data.toString('base64'))
+        })
+      })
+    }
+
+    
+    // hash password
+    const hashPassword = (password) => {
+      return new Promise((resolve, reject) =>
+        bcrypt.hash(password, 10, (err, hash) => {
+          err ? reject(err) : resolve(hash)
+        })
+      )
+    }
+
+
+    const checkPassword = (reqPassword, foundUser, response) => {
+      return new Promise((resolve, reject) =>
+        bcrypt.compare(reqPassword, foundUser.password, (err, res) => {
+            if (err) {
+              return reject(err)
+            }
+            else if (res) {
+              return resolve(res)
+            } else {
+                return response.status(422).send({error:"Something went wrong, please try again"});
+            
+            }
+        })
+      )
+    }
+
+
+    // update user password
+    const updateUserPassword = user => {
+      return pool.query(
+        'UPDATE users SET password = $1, token = $2 WHERE firstname = $3 AND lastname = $4 AND email = $5 RETURNING *;',
+        [user.password, user.token, user.firstname, user.lastname, user.email]
+    ) 
+      .then((data) => data.rows[0])
+    }
+    
+
+    const updateUserToken = (token, user) => {
+      return pool.query("UPDATE users SET token = $1 WHERE id = $2 RETURNING id, email, token, expires_in", [token, user.id])
+        .then((data) => data.rows[0])
+    }
+
+    
+    // sendgrid confirm email
+    const sendGridConfirmEmail = (user, response) => {
+    
+      var newUsers = { redirected: true };
+      sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+    var authenticationUrl = `https://gentle-refuge-71193.herokuapp.com/user/verify?token= ${user.token}`;
+    const msg = {
+    to: user.email, // recipient
+    from: 'kondwaninantchito@gmail.com',
+    subject: 'EMAIL ADDRESS VERIFICATION',
+    text: 'We are pleased that you are in touch with us. We promise to give you the best services',
+    html: '<a target=_blank href=\"' + authenticationUrl + '\">Super Welcomes Click here to confirm your email with Ibuy</a>',
+    }
+
+    sgMail
+    .send(msg)
+    .then( () => {
+      console.log('Email sent');
+    })
+    .catch( (error)=>{
+      // console.error(error)
+      response.status(404).json(error)
+    });
+    }
+
+
+    // sendgrid reset email
+    const sendGridResetPassword = (user, response) => {
+        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        
+    var authenticationUrl = `https://gentle-refuge-71193.herokuapp.com/passwordreset/confirm?token= ${user.token}`;
+    const msg = {
+    to: user.email, // recipient
+    from: 'kondwaninantchito@gmail.com',
+    subject: 'PASSWORD RESET CONFIRMATION',
+    text: 'You can reset your password',
+    html: '<a target=_blank href=\"' + authenticationUrl + '\"> Click on this link to reset your password</a>',
+    }
+
+
+    sgMail
+    .send(msg)
+    .then( () => {
+      
+      response.status(200).json(user.id);
+      response.end();
+    })
+    .catch( (error)=>{
+      console.error(error)
+    });
+    }
+
+    module.exports = UserRepo;

@@ -1,0 +1,201 @@
+
+POST http://localhost:80/
+
+###
+
+GET https://morning-shore-59203.herokuapp.com/furniture
+
+
+###
+
+POST http://localhost:80/signup 
+content-type: application/json 
+ 
+ {
+    "values": { "firstName": "Kondwani", "lastName": "Nantchito", "middleName": "Robert", "birthDate": "2000-10-05", "gender": "Male", "district": "Chiradzulu", "village": "Mwitha",
+    "currentAddress": "Box Abnormal", "email": "kondwaninantchito@gmail.com", "phoneNumber": "265884735492", "password": "Aviation@2621", "nationality": "Malawian" },
+    "authCarrier": {
+    "id": "1",
+    "tok": "$2b$04$pnzuthZ.cYX7Lu8wLEmVSupIOJAY1j.3rxkq8jMbSUCdzQ0Jt1UCu"
+  }
+ }
+
+###
+
+
+POST http://localhost:80/add/teacher 
+content-type: application/json 
+ 
+ {
+    "values": { "firstName": "Kondwani", "lastName": "Nantchito", "middleName": "Robert", "birthDate": "2000-10-05", "gender": "Male", "nationality": "Malawian", "district": "Chiradzulu", "password": "Aviation@2621" },
+    "token": "$2b$04$pnzuthZ.cYX7Lu8wLEmVSupIOJAY1j.3rxkq8jMbSUCdzQ0Jt1UCu"
+ }
+
+
+###
+
+
+POST http://localhost:80/save HTTP/1.1
+content-type: application/json
+ 
+ {
+    "schoolId": "1", 
+    "email":"kondwaninantchito@gmail.com"
+}
+
+###
+
+DELETE http://localhost:80/delete/teacher/5 HTTP/1.1
+content-type: application/json
+ 
+ {
+    "id": "2", 
+    "email":"kondwaninantchito@gmail.com"
+}
+
+###
+
+GET http://localhost:80/teacherhome/display/2 HTTP/1.1
+content-type: application/json
+ 
+ {
+    "class":
+    "schoolId": "2", 
+    "email":"kondwaninantchito@gmail.com"
+}
+
+###
+
+POST http://localhost:80/sendgrid HTTP/1.1
+content-type: application/json
+ 
+ {
+    "schoolId": "1", 
+    "email":"kondwaninantchito@gmail.com"
+}
+
+###
+
+
+POST http://localhost:80/student/subjects HTTP/1.1
+content-type: application/json
+ 
+ {
+    "studentId":"4",
+    "password": "Aviation@2621" 
+}
+
+###
+
+
+POST http://localhost:3001/user/verify HTTP/1.1
+content-type: application/json
+    
+ {
+    "token":"U6uwTSJ3Jit/yjmWtSmZQw==",
+    "email":"nantchitorobert@gmail.com"
+}
+
+###
+
+POST http://localhost:3001/forgot/password HTTP/1.1
+content-type: application/json
+ 
+ {
+    "firstname": "Kondwani", 
+    "lastname":"Nantchito", 
+    "email":"nantchitorobert@gmail.com"
+}
+
+###
+
+POST http://localhost:3001/passwordreset/confirm HTTP/1.1
+content-type: application/json
+ 
+ {
+     
+    "email":"nantchitorobert@gmail.com",
+    "password": "Aviation@262101",
+    "firstname": "Kondwani", 
+    "lastname": "Nantchito",
+    "token": "kKZZY2Q3nm8Jv+xGHwfdFQ=="
+}
+
+###
+
+POST http://localhost:3001/google HTTP/1.1
+content-type: application/json
+    
+ {
+     "guserId": "238844755757755858588",
+    "gtoken":"ZEJCJ8DwjaAvE1YlvWxVqA==",
+    "email":"zisinantchitorobert@gmail.com"
+}
+
+###
+
+
+GET http://localhost:3001/twils HTTP/1.1
+content-type: application/json
+    
+ {
+     "from": "+16504463400",
+    "to":"265884735492",
+    "data":"worth a trillion by a single user"
+}
+
+
+
+###
+
+POST http://localhost:80/signin HTTP/1.1
+content-type: application/json
+ 
+ { 
+
+       "email":"kondwaninantchito@gmail.com", 
+    "password":"Aviation@2621"
+}
+    
+###
+GET http://localhost:80/search HTTP/1.1
+content-type: application/json
+ 
+ { 
+     
+       "search":"apparel"
+}
+
+
+###
+
+PUT http://localhost:3001/cart HTTP/1.1
+content-type: application/json 
+{
+    "username":"AlysonMotors", 
+    "bio":"Your are the Alysons"
+}
+
+
+
+###
+
+http://localhost:3001/detailed/supplier/2
+
+###
+
+POST http://localhost:80/wholesale HTTP/1.1
+content-type: application/json 
+
+{
+      "userId": "429",
+      "addedItems": [{"id": "3",  "message": "Lather handbag", "supplierId":"1", "quantity":"1", "productName":"jet"}],
+    "formValues": {"Address":"Box Abnormal Fatherwill", "PhoneNumber": "265999355983", "City": "Abnormal"}
+}
+
+###
+ 
+DELETE http://localhost:3001/users/2 HTTP/1.1
+content-type: application/json
+
+
