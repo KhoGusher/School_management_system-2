@@ -1,87 +1,156 @@
 import React from 'react'
-import "./Guardians.css"
+import { connect } from 'react-redux';
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline, Edit, Details } from "@material-ui/icons"
-import { Guardianrows } from "../../../dummyData"
 import { Link } from "react-router-dom"
-import { useState } from "react"
 
-export default function Guardians() {
-    const [teachers, setTeachers] = useState(Guardianrows);
-    //delete teacher function
-    const handleTecherDelete = (id) => {
-        setTeachers(teachers.filter((item) => item.id !== id));
-    };
+import 'bootstrap/dist/css/bootstrap.css';
+import Spinner from 'react-bootstrap/Spinner';
 
-    // `(`manager_id`, `firstName`, `lastName`, `middle_name`, `DOB`, `gender`, `district`, `village`, `current_Address`, `email`,
-    //  `phoneNumber`, `rank`, `password`, `school_id`, `master_id`, `nationality`)
-    const columns = [
-        // { field: 'id', headerName: 'ID', width: 70 },
+import { getGuardians, deleteGuardian } from '../../../Controllers/Admin';
+import '../Teachers/Teachers.css';
 
-        {
-            field: 'firstName', headerName: 'First name', width: 160, renderCell: (params) => {
-                return (
-                    <div className="teacherListFirst">
-                        <img className="teachersPic" scr={params.row.avator} alt="img" />
-                        {params.row.firstName}
-                    </div>
-                )
+
+class Guardians extends React.Component {
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            toRefresh: null
+        }
+
+             this.columns = [ 
+                {
+                    field: 'firstname', headerName: 'First name', width: 160, renderCell: (params) => {
+                        return (
+                            <div className="teacherListFirst">
+                                <img className="teachersPic" scr={params.row.avator} alt="img" />
+                                {params.row.firstname}
+                            </div>
+                        )
+                    }
+                },
+                { field: 'lastname', headerName: 'Last name', width: 160 },
+                { field: 'phonenumber', headerName: 'Phone', width: 130 },
+                { field: 'gender', headerName: 'gender', width: 125 },
+                { field: 'address', headerName: 'address', width: 130 },
+                { field: 'village', headerName: 'village', width: 120 },
+                { field: 'district', headerName: 'district', width: 120 },
+                { field: 'nationality', headerName: 'Nationality', width: 130 },
+                { field: 'identity', headerName: 'Identity', width: 130 },
+                
+                {
+                    field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
+                        return (
+                            <>
+                              <Link
+                              to={{
+                                 pathname: '/guardian/details',
+                                 state: { guardian: params.row }
+                               }}
+                              >
+                               <Details className="teacherDetail" />
+                              </Link> 
+                                <Link
+                                 to={{
+                                    pathname: '/guardian/update',
+                                    state: { guardian: params.row }
+                                  }}
+                                 >
+                                     <Edit className="teacherEdit" />
+                                    
+                                </Link>
+            
+                                <DeleteOutline 
+                                 className="teacherDelete" 
+                                 onClick={() => {
+                                    this.setState({toRefresh: true});
+                                    this.props.goDeleteGuardian(params.row.guardianid)}
+                                    
+                                  } />
+                            </>
+                        )
+                    }
+                }
+            ];
+    }
+
+    componentDidMount(){
+        const temp = localStorage.getItem('data');
+        const updated = JSON.parse(temp);
+        let data = {
+            schoolId: updated.schoolid
+        }
+
+        this.props.goGetGuardians(JSON.stringify(data));
+     }
+    
+    componentDidUpdate(){
+        if(this.state.toRefresh){
+
+            const temp = localStorage.getItem('data');
+             const updated = JSON.parse(temp);
+            let data = {
+                schoolId: updated.schoolid
             }
-        },
-        { field: 'lastName', headerName: 'Last name', width: 160 },
-        { field: 'dob', headerName: 'D.O.B', width: 115 },
-        { field: 'gender', headerName: 'Gender', width: 125 },
-        { field: 'district', headerName: 'District', width: 120 },
-        { field: 'residentialAddress', headerName: 'Address', width: 130 },
-        { field: 'email', headerName: 'Email', width: 130 },
-        { field: 'phoneNumber', headerName: 'Phone', width: 130 },
-        {
-            field: 'action', headerName: 'Action', width: 120, renderCell: (params) => {
-                return (
-                    <>
-                        <Link to={"/Guardian/" + params.row.id}>
-                            <Details className="teacherDetail" />
-                        </Link>
-                        <Link to={"/Guardian/" + params.row.id}>
-                            <Edit className="teacherEdit" />
-                        </Link>
-                        <DeleteOutline className="teacherDelete" onClick={() => handleTecherDelete(params.row.id)} />
-                    </>
 
-                )
-            }
-        },
+          this.props.goGetGuardians(JSON.stringify(data));
+         // this.setState({toRefresh: false});
+        }
+     } 
 
-    ];
-    return (
+    processGuardiansList = () => {      
+      return(
         <div className="teacherList">
             <div className="topTeachers">
                 <div className="teachersTitle"><h3>Guardians</h3></div>
-                <Link to="/NewGuardian">
+                <Link to="/newguardian">
                     <button className="newTeacher">New Guardian</button>
-
                 </Link>
-
                 <button className="newTeacher">Print Preview</button>
                 <button className="newTeacher">Import Guardians</button>
                 <button className="newTeacher">Export Guardians</button>
                 <div className="btn-search">
-
-                    <input className="search-teacher form-control" value="Search Guardian" />
+                    <input className="search-teacher form-control" value="Search Student" />
                 </div>
-
             </div>
-
             <div style={{ height: 700, width: '100%' }}>
                 <DataGrid className="teachersTable"
-                    rows={teachers}
+                    getRowId={(r) => r.guardianid}
+                    rows={this.props.guardians}
                     disableSelectionOnClick
-                    columns={columns}
+                    columns={this.columns}
                     pageSize={11}
                     rowsPerPageOptions={[5]}
                     checkboxSelection
                 />
-            </div>
-        </div>
-    )
-}
+              </div>
+           </div>
+              );
+           }
+
+    render(){
+       return (
+          <>
+            { this.props.guardians ? this.processGuardiansList(): <Spinner animation="grow" variant="success" /> }
+          </>  
+        );
+          }
+        }
+        
+const mapStateToProps = state => {
+    return {
+        guardians: state.Admin.guardians,
+        loading: state.Auth.loading
+    }
+    }
+    
+    const mapDispatchToProps = dispatch => {
+    return {
+        goGetGuardians: (schoolId) => dispatch( getGuardians(schoolId)),
+        goDeleteGuardian: (id) => dispatch( deleteGuardian(id))
+    };
+    };
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Guardians);

@@ -20,19 +20,19 @@ export const userData = [
     "Active User": 3000,
   },
   {
-    name: "Jun",
+    name: "June",
     "Active User": 2000,
   },
   {
-    name: "Jul",
+    name: "July",
     "Active User": 4000,
   },
   {
-    name: "Agu",
+    name: "Aug",
     "Active User": 3000,
   },
   {
-    name: "Sep",
+    name: "Sept",
     "Active User": 4000,
   },
   {
@@ -63,90 +63,6 @@ export const productData = [
     "Sales": 5000,
   },
 ];
-export const Classrows = [
-  {
-    id: 1,
-    ClassName: "std1",
-    ClassDescription: "Candidate",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-  {
-    id: 2,
-    ClassName: "std8",
-    ClassDescription: "Mere",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-
-]
-export const Subjectrows = [
-  {
-    id: 1,
-    subjectName: "chichewa",
-    SubjectCode: "chich10",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-  {
-    id: 2,
-    subjectName: "chichewa",
-    SubjectCode: "chich9",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-  {
-    id: 3,
-    subjectName: "chichewa",
-    SubjectCode: "chich7",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-  {
-    id: 4,
-    subjectName: "chichewa",
-    SubjectCode: "chich4",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-  {
-    id: 5,
-    subjectName: "chichewa",
-    SubjectCode: "chich2",
-    TotalSubjectTeachers: "3",
-    TotalStudents: "13",
-  },
-]
-export const Studentrows = [
-  {
-    id: 1,
-    firstName: "princesss",
-    lastName: "luhanga",
-    dob: "12-14-1990",
-    gender: "Female",
-    district: "Rumphi",
-    residentialAddress: "Chikanda 6",
-    avatar: "https://images.pexels.c",
-    email: "pluhanga.com",
-    phoneNumber: "097454545463",
-
-  },
-]
-export const Guardianrows = [
-  {
-    id: 1,
-    firstName: "mary",
-    lastName: "luka",
-    dob: "12-14-1990",
-    gender: "Female",
-    district: "zomba",
-    residentialAddress: "khuvinda 6",
-    avatar: "https://images.pexels.c",
-    email: "pp.com",
-    phoneNumber: "4545",
-
-  },
-]
 
 export const Teacherrows = [
   {
@@ -321,3 +237,95 @@ export const Teacherrows = [
 
 ];
 
+export const productRows = [
+  {
+    id: 1,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 2,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 3,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 4,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 5,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 6,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 7,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 8,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 9,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+  {
+    id: 10,
+    name: "Apple Airpods",
+    img:
+      "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    stock: 123,
+    status: "active",
+    price: "$120.00",
+  },
+];

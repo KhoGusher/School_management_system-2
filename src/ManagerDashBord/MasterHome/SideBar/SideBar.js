@@ -6,8 +6,6 @@ import { Link } from "react-router-dom"
 import profile from "./profile.jpg"
 
 
-
-
 function SideBar() {
     return (
         <div className="sidebar">
@@ -24,69 +22,69 @@ function SideBar() {
 
                     <ul className="sidebarList">
                         <li className="sidebarListItem active">
-                            <Link to="/Home">
+                            <Link to="/home">
                                 <FaHome className="sidebarIcon" />
                                 Home
                             </Link>
                         </li>
                         {/* end of home */}
                         <li className="sidebarListItem">
-                            <Link to="/Subjects">
+                            <Link to="/subjects">
                                 <MdSubject className="sidebarIcon" />
                                 Subjects
                             </Link>
 
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Classes">
+                            <Link to="/classes">
                                 <MdClass className="sidebarIcon" />
                                 Classes
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Teachers">
+                            <Link to="/teachers">
                                 <FaChalkboardTeacher className="sidebarIcon" />
                                 Teachers
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Students">
+                            <Link to="/students">
                                 <MdPeople className="sidebarIcon" />
                                 Students
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Guardians">
+                            <Link to="/guardians">
                                 <MdPeople className="sidebarIcon" />
                                 Guardians
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Ranks">
+                            <Link to="/ranks">
                                 <FaCodeBranch className="sidebarIcon" />
                                 Ranks
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Candidates">
+                            <Link to="/candidates">
                                 <FaUserGraduate className="sidebarIcon" />
                                 Candidates
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Calender">
+                            <Link to="/calender">
                                 <FaCalendarDay className="sidebarIcon" />
                                 Calendar
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Timetable">
+                            <Link to="/timetable">
                                 <MdTimer className="sidebarIcon" />
                                 Time Table
                             </Link>
                         </li>
                         <li className="sidebarListItem">
-                            <Link to="/Support">
+                            <Link to="/support">
                                 <MdSupport className="sidebarIcon" />
                                 Support
                             </Link>

@@ -1,15 +1,6 @@
 import React from 'react'
 import "./SubjectDetails.css"
-import profile from "../profile.jpg"
-import {
-    CalendarToday,
-    LocationSearching,
-    MailOutline,
-    PermIdentity,
-    PhoneAndroid,
-    Publish,
-} from "@material-ui/icons";
-import { Link } from '@material-ui/core';
+
 
 export default function SubjectDetails() {
     return (

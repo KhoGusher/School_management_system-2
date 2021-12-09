@@ -1,0 +1,22 @@
+.skylabs {
+    background: url('./assets/image-1.jpg')
+      no-repeat center/cover;
+    height: 650px;
+  }
+  .skylabs .skylabs-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 650px;
+    text-align: center;
+    color: #fff;
+  }
+  .skylabs .skylabs-overlay h1 {
+    font-size: 36px;
+    padding-bottom: 20px;
+  }
+  .paragraph{
+    font-size: 25px;
+  }
